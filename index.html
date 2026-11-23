@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROVIDENCE 7 — Lo Mejor para tu Hogar y Familia | Pago al Recibir</title>
+  <meta name="description" content="Tienda oficial PROVIDENCE 7 en Venezuela. Ofertas especiales los 7 días, atención 100% personalizada por WhatsApp y pago contra entrega con Transportadora FLAASH." />
+
+  <!-- Tipografías Google Fonts: Outfit (Encabezados) y Plus Jakarta Sans (Textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              green: '#0B4A35',
+              greenHover: '#146348',
+              amber: '#F29F05',
+              amberSoft: '#FFF5BA',
+              cream: '#FDFBF7',
+              border: '#E7EFEA'
+            },
+            pastel: {
+              mint: '#DBFFD6',
+              mintDeep: '#AFF8DB',
+              butter: '#FFF5BA',
+              butterLight: '#FFFFD1',
+              peach: '#FFCBC1',
+              pink: '#FFC9DE',
+              sky: '#C4FAF8',
+              skyDeep: '#ACE7FF',
+              lavender: '#DCD3FF',
+              lavenderLight: '#FBE4FF'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 32px -10px rgba(11, 74, 53, 0.08)',
+            lift: '0 18px 42px -12px rgba(11, 74, 53, 0.14)',
+            amberGlow: '0 10px 28px -6px rgba(242, 159, 5, 0.34)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* =========================================================================
+       SISTEMA DE ESTILOS ORGÁNICOS Y MOVIMIENTO CINÉTICO SUAVE — PROVIDENCE 7
+       ========================================================================= */
+    :root {
+      --brand-green: #0B4A35;
+      --brand-green-hover: #146348;
+      --brand-amber: #F29F05;
+      --bg-cream: #FDFBF7;
+      --card-border: #E7EFEA;
+      --ease-organic: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-magnetic: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: #163329;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: #FFF5BA;
+      color: #0B4A35;
+    }
+
+    /* Scrollbar limpio y discreto */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C7DCD2;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0B4A35;
+    }
+
+    /* 1. MANCHAS PASTEL FLOTANTES AMBIENTALES (GPU ACCELERATED, BAJA OPACIDAD) */
+    .ambient-pastels {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .pastel-blob {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(85px);
+      will-change: transform;
+      animation: floatSoft 22s ease-in-out infinite alternate;
+    }
+
+    .blob-mint {
+      width: min(520px, 75vw);
+      height: min(520px, 75vw);
+      background: #DBFFD6;
+      opacity: 0.55;
+      top: -12%;
+      left: -8%;
+    }
+
+    .blob-butter {
+      width: min(460px, 68vw);
+      height: min(460px, 68vw);
+      background: #FFF5BA;
+      opacity: 0.62;
+      top: 12%;
+      right: -10%;
+      animation-delay: -6s;
+    }
+
+    .blob-peach {
+      width: min(420px, 64vw);
+      height: min(420px, 64vw);
+      background: #FFCBC1;
+      opacity: 0.34;
+      bottom: 8%;
+      left: 14%;
+      animation-delay: -11s;
+    }
+
+    .blob-sky {
+      width: min(450px, 65vw);
+      height: min(450px, 65vw);
+      background: #C4FAF8;
+      opacity: 0.44;
+      bottom: -14%;
+      right: 8%;
+      animation-delay: -16s;
+    }
+
+    @keyframes floatSoft {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(40px, -32px, 0) scale(1.08); }
+      100% { transform: translate3d(-28px, 36px, 0) scale(0.95); }
+    }
+
+    /* 2. REVELADO ESCALONADO AL HACER SCROLL */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.75s var(--ease-organic), transform 0.75s var(--ease-organic);
+    }
+
+    .reveal-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 3. TARJETAS CON INCLINACIÓN 3D SUTIL Y BRILLO CÁLIDO */
+    .tilt-surface {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.22s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .tilt-surface::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        460px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(242, 159, 5, 0.11),
+        rgba(175, 248, 219, 0.08) 38%,
+        transparent 62%
+      );
+      opacity: 0;
+      transition: opacity 0.28s ease;
+      pointer-events: none;
+    }
+
+    .tilt-surface:hover::after {
+      opacity: 1;
+    }
+
+    /* 4. BOTONES MAGNÉTICOS SUAVES */
+    .magnetic-el {
+      transition: transform 0.24s var(--ease-magnetic), background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    /* 5. CINTA INFINITA (MARQUEE) EN TONOS PASTELES */
+    .marquee-shell {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      align-items: center;
+      width: max-content;
+      animation: marqueeRun 30s linear infinite;
+    }
+
+    .marquee-shell:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqueeRun {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* 6. INDICADOR ANIMADO DE DESPLAZAMIENTO SUAVE EN EL HERO */
+    .scroll-cue-dot {
+      animation: scrollCueMove 1.9s ease-in-out infinite;
+    }
+
+    @keyframes scrollCueMove {
+      0% { transform: translateY(0); opacity: 1; }
+      70% { transform: translateY(14px); opacity: 0.25; }
+      100% { transform: translateY(0); opacity: 0; }
+    }
+
+    /* 7. PULSO SUAVE PARA BOTÓN FLOTANTE DE WHATSAPP */
+    @keyframes waPulse {
+      0% { box-shadow: 0 0 0 0 rgba(242, 159, 5, 0.45), 0 12px 30px rgba(11, 74, 53, 0.28); }
+      70% { box-shadow: 0 0 0 14px rgba(242, 159, 5, 0), 0 14px 34px rgba(11, 74, 53, 0.34); }
+      100% { box-shadow: 0 0 0 0 rgba(242, 159, 5, 0), 0 12px 30px rgba(11, 74, 53, 0.28); }
+    }
+
+    .wa-pulse-btn {
+      animation: waPulse 2.8s infinite;
+    }
+
+    /* Clamp limpio de 2 líneas */
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Ocultar barra horizontal en píldoras deslizables en móvil */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pastel-butter selection:text-brand-green">
+
+  <!-- FONDO AMBIENTAL CON MANCHAS PASTEL FLOTANTES -->
+  <div class="ambient-pastels" aria-hidden="true">
+    <div class="pastel-blob blob-mint"></div>
+    <div class="pastel-blob blob-butter"></div>
+    <div class="pastel-blob blob-peach"></div>
+    <div class="pastel-blob blob-sky"></div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- 1. BARRA SUPERIOR FIJA (STICKY) TRASLÚCIDA EN BLANCO CREMA              -->
+  <!-- ======================================================================= -->
+  <header class="sticky top-0 z-50 bg-[#FDFBF7]/85 backdrop-blur-xl border-b border-brand-border/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+      <!-- Logotipo Oficial PROVIDENCE 7 (con soporte automático para ./media/logo.jpeg) -->
+      <a href="#inicio" class="flex items-center gap-3 shrink-0 group" aria-label="PROVIDENCE 7 Inicio">
+        <div id="navLogoBox" class="flex items-center gap-2.5">
+          <!-- Imagen opcional si el usuario sube ./media/logo.jpeg -->
+          <img
+            id="customBrandLogoImg"
+            alt="PROVIDENCE 7"
+            class="hidden h-11 w-auto object-contain rounded-lg"
+          />
+          <!-- SVG Oficial PROVIDENCE 7 (Respaldo nítido por defecto) -->
+          <div id="svgBrandLogoWrap" class="flex items-center gap-2.5">
+            <svg class="w-11 h-10 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 106" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Triángulo abierto verde bosque corporativo -->
+              <path d="M50 94H14L60 12L106 94H65" stroke="#0B4A35" stroke-width="10.5" stroke-linecap="butt" stroke-linejoin="miter" />
+              <!-- Arco interno que forma la letra P en espacio negativo -->
+              <path d="M73 53C81.5 56 84 67.5 76.5 74C72.5 77.5 66 78 59.5 78" stroke="#0B4A35" stroke-width="9.5" stroke-linecap="butt" />
+              <!-- Número 7 en ámbar dorado corporativo -->
+              <path d="M47 46H73.5L47.5 98H37L59.5 55.5H43L47 46Z" fill="#F29F05" />
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="font-display font-extrabold text-xl tracking-tight text-brand-green">
+                PROVIDENCE<span class="text-brand-amber">7</span>
+              </span>
+              <span class="text-[10px] font-semibold tracking-[0.16em] uppercase text-brand-green/65 mt-0.5">
+                Hogar &amp; Familia
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Enlaces de Navegación (Escritorio) -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-green/80" aria-label="Navegación principal">
+        <a href="#inicio" class="hover:text-brand-green transition-colors">Inicio</a>
+        <a href="#videos" class="hover:text-brand-green transition-colors">Destacados y Videos</a>
+        <a href="#pago-en-casa" class="hover:text-brand-green transition-colors">Pago en Casa</a>
+        <a href="#catalogo" class="hover:text-brand-green transition-colors">Catálogo</a>
+        <a href="#cobertura-flaash" class="hover:text-brand-green transition-colors">Cobertura FLAASH</a>
+      </nav>
+
+      <!-- Acciones: Lista de Consulta + Botón Principal WhatsApp -->
+      <div class="flex items-center gap-2.5">
+        <button
+          id="openConsultListBtn"
+          type="button"
+          class="magnetic-el inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-white border border-brand-border hover:border-brand-amber text-brand-green font-semibold text-sm shadow-sm cursor-pointer"
+          aria-label="Abrir mi lista de consulta"
+        >
+          <svg class="w-4 h-4 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+            <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+            <path d="M9 12h6"></path>
+            <path d="M9 16h4"></path>
+          </svg>
+          <span class="hidden sm:inline">Mi Consulta</span>
+          <span id="consultCountBadge" class="inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 rounded-full bg-brand-amber text-brand-green font-bold text-xs transition-transform duration-200">
+            0
+          </span>
+        </button>
+
+        <button
+          id="navWhatsappBtn"
+          type="button"
+          class="magnetic-el hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold text-sm shadow-soft cursor-pointer"
+        >
+          <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>Atención por WhatsApp</span>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-white border border-brand-border text-brand-green"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobileMenuPanel" class="hidden lg:hidden bg-[#FDFBF7] border-t border-brand-border px-4 py-4 space-y-1.5 shadow-lg">
+      <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-2xl font-semibold text-brand-green hover:bg-pastel-mint/50">Inicio</a>
+      <a href="#videos" class="mobile-nav-link block px-4 py-3 rounded-2xl font-semibold text-brand-green hover:bg-pastel-butter/60">Destacados y Videos</a>
+      <a href="#pago-en-casa" class="mobile-nav-link block px-4 py-3 rounded-2xl font-semibold text-brand-green hover:bg-pastel-sky/60">Pago en Casa</a>
+      <a href="#catalogo" class="mobile-nav-link block px-4 py-3 rounded-2xl font-semibold text-brand-green hover:bg-pastel-peach/45">Catálogo Completo</a>
+      <a href="#cobertura-flaash" class="mobile-nav-link block px-4 py-3 rounded-2xl font-semibold text-brand-green hover:bg-pastel-lavender/45">Cobertura FLAASH</a>
+      <button
+        id="mobileMenuWaBtn"
+        type="button"
+        class="w-full mt-2 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-brand-green text-white font-semibold text-sm"
+      >
+        <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>Escribir al WhatsApp ahora</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================== -->
+    <!-- 2. HERO EDITORIAL LUMINOSO Y HUMANO                                   -->
+    <!-- ===================================================================== -->
+    <section id="inicio" class="relative pt-10 pb-14 lg:pt-16 lg:pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Columna Izquierda: Mensaje Humano + CTAs -->
+          <div class="lg:col-span-7 space-y-6 reveal-up is-visible">
+            <!-- Badge pastel menta / ámbar -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-pastel-mint via-pastel-butterLight to-pastel-butter border border-brand-green/10 shadow-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-amber"></span>
+              <span class="text-xs sm:text-sm font-bold tracking-wide text-brand-green">
+                Ofertas Especiales · Atención Personalizada los 7 Días
+              </span>
+            </div>
+
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.65rem] leading-[1.06] tracking-tight text-brand-green">
+              Lo mejor para tu hogar y familia.
+              <span class="relative inline-block mt-1">
+                <span class="relative z-10 text-brand-green">Pagas al recibir en casa.</span>
+                <span class="absolute left-0 right-0 bottom-1.5 h-3.5 bg-pastel-butter -z-0 rounded-full"></span>
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#3D5A50] leading-relaxed max-w-xl">
+              En <strong class="text-brand-green font-bold">PROVIDENCE 7</strong> te atendemos personalmente por WhatsApp para darte las mejores ofertas especiales del día, resolver tus dudas y coordinar tu entrega rápida con <strong class="text-brand-green font-bold">Transportadora FLAASH</strong>.
+            </p>
+
+            <!-- CTAs principales -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+              <button
+                id="heroWhatsappBtn"
+                type="button"
+                class="magnetic-el inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-base shadow-lift cursor-pointer"
+              >
+                <svg class="w-5 h-5 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>Escribir al WhatsApp ahora</span>
+              </button>
+
+              <a
+                href="#catalogo"
+                class="magnetic-el inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white hover:bg-pastel-mint/45 border-2 border-[#CFE5DA] text-brand-green font-bold text-base shadow-sm"
+              >
+                <span>Explorar Catálogo</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Indicadores rápidos de confianza -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3 max-w-xl">
+              <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-2xl bg-white/90 border border-brand-border">
+                <span class="w-8 h-8 rounded-xl bg-pastel-mint flex items-center justify-center text-brand-green shrink-0">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                </span>
+                <span class="text-xs font-bold text-brand-green leading-tight">Pago seguro al recibir</span>
+              </div>
+              <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-2xl bg-white/90 border border-brand-border">
+                <span class="w-8 h-8 rounded-xl bg-pastel-butter flex items-center justify-center text-brand-green shrink-0">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                </span>
+                <span class="text-xs font-bold text-brand-green leading-tight">Envío con FLAASH</span>
+              </div>
+              <div class="col-span-2 sm:col-span-1 flex items-center gap-2.5 px-3.5 py-2.5 rounded-2xl bg-white/90 border border-brand-border">
+                <span class="w-8 h-8 rounded-xl bg-pastel-sky flex items-center justify-center text-brand-green shrink-0">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+                <span class="text-xs font-bold text-brand-green leading-tight">Ofertas los 7 días</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Tarjeta Visual 3D Suave Pastel -->
+          <div class="lg:col-span-5 reveal-up is-visible">
+            <div class="tilt-surface bg-white rounded-[2rem] border border-brand-border shadow-lift p-5 sm:p-6 relative overflow-hidden">
+              <!-- Fondo decorativo pastel dentro de la tarjeta -->
+              <div class="rounded-[1.5rem] bg-gradient-to-br from-pastel-mint/70 via-pastel-butterLight/80 to-pastel-sky/60 p-6 border border-white/80 relative overflow-hidden">
+                <!-- Etiqueta flotante -->
+                <div class="flex items-center justify-between gap-2 mb-5">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 text-brand-green text-xs font-bold shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+                    Pago Contra Entrega
+                  </span>
+                  <span class="px-3 py-1 rounded-full bg-brand-green text-white text-xs font-bold tracking-wide">
+                    Envío FLAASH
+                  </span>
+                </div>
+
+                <!-- Espacio para GIF de Marca (./media/logo.gif) o Composición SVG Limpia -->
+                <div id="heroBrandVisualBox" class="bg-white/85 backdrop-blur-sm rounded-2xl border border-white p-5 flex flex-col items-center justify-center text-center min-h-[175px] shadow-sm">
+                  <img
+                    id="customHeroGifImg"
+                    alt="Animación PROVIDENCE 7"
+                    class="hidden max-h-40 w-auto object-contain rounded-xl"
+                  />
+                  <div id="heroSvgVisualFallback" class="flex flex-col items-center">
+                    <svg class="w-24 h-20 mb-2" viewBox="0 0 120 106" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M50 94H14L60 12L106 94H65" stroke="#0B4A35" stroke-width="10.5" stroke-linecap="butt" stroke-linejoin="miter" />
+                      <path d="M73 53C81.5 56 84 67.5 76.5 74C72.5 77.5 66 78 59.5 78" stroke="#0B4A35" stroke-width="9.5" stroke-linecap="butt" />
+                      <path d="M47 46H73.5L47.5 98H37L59.5 55.5H43L47 46Z" fill="#F29F05" />
+                    </svg>
+                    <p class="font-display font-extrabold text-2xl tracking-tight text-brand-green">
+                      PROVIDENCE<span class="text-brand-amber">7</span>
+                    </p>
+                    <p class="text-xs font-medium text-[#466358] mt-1">
+                      Calidad real en la puerta de tu casa
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4 Métodos de Pago Destacados -->
+                <div class="mt-4">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-green/75 mb-2.5 text-center">
+                    Múltiples medios de pago al recibir
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/90 border border-white text-xs font-bold text-brand-green">
+                      <span class="w-6 h-6 rounded-lg bg-pastel-mint flex items-center justify-center shrink-0">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                      </span>
+                      Pago Móvil
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/90 border border-white text-xs font-bold text-brand-green">
+                      <span class="w-6 h-6 rounded-lg bg-pastel-lavender flex items-center justify-center shrink-0">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6h12l-12 12h12"></path></svg>
+                      </span>
+                      Zelle
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/90 border border-white text-xs font-bold text-brand-green">
+                      <span class="w-6 h-6 rounded-lg bg-pastel-butter flex items-center justify-center shrink-0">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon><polygon points="12 8 16 12 12 16 8 12 12 8"></polygon></svg>
+                      </span>
+                      Binance USDT
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/90 border border-white text-xs font-bold text-brand-green">
+                      <span class="w-6 h-6 rounded-lg bg-pastel-sky flex items-center justify-center shrink-0">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle></svg>
+                      </span>
+                      Efectivo Divisas
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acceso rápido a los videos reales -->
+              <div class="mt-4 flex items-center justify-between gap-3 px-2">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-9 h-9 rounded-full bg-pastel-peach/65 text-brand-green flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 19 12 8 19 8 5"></polygon></svg>
+                  </span>
+                  <div class="leading-tight">
+                    <p class="text-xs font-bold text-brand-green">Mira cómo entregamos</p>
+                    <p class="text-[11px] text-[#557065]">Videos oficiales y cobertura FLAASH</p>
+                  </div>
+                </div>
+                <a href="#videos" class="text-xs font-bold text-brand-green hover:text-brand-amber underline underline-offset-4 shrink-0 transition-colors">
+                  Ver videos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicador animado de desplazamiento suave -->
+        <div class="mt-10 lg:mt-14 flex flex-col items-center gap-2 text-brand-green/60">
+          <div class="w-6 h-10 rounded-full border-2 border-brand-green/25 flex justify-center pt-1.5 bg-white/60">
+            <div class="w-1.5 h-2.5 rounded-full bg-brand-amber scroll-cue-dot"></div>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-[0.2em]">Desliza para descubrir</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- CINTA INFINITA (MARQUEE) EN TONOS PASTELES                            -->
+    <!-- ===================================================================== -->
+    <div class="marquee-shell py-4 bg-gradient-to-r from-pastel-mint/65 via-pastel-butterLight/75 to-pastel-sky/65 border-y border-brand-border" aria-label="Beneficios PROVIDENCE 7">
+      <div class="marquee-track font-display font-bold text-sm sm:text-base tracking-wide text-brand-green">
+        <span class="px-5">PAGO CONTRA ENTREGA</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">TRANSPORTADORA FLAASH</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">PAGO MÓVIL</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">ZELLE</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">BINANCE</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">EFECTIVO EN DIVISAS</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">OFERTAS ESPECIALES POR WHATSAPP</span><span class="text-brand-amber font-extrabold">•</span>
+        <!-- Duplicado continuo -->
+        <span class="px-5">PAGO CONTRA ENTREGA</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">TRANSPORTADORA FLAASH</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">PAGO MÓVIL</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">ZELLE</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">BINANCE</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">EFECTIVO EN DIVISAS</span><span class="text-brand-amber font-extrabold">•</span>
+        <span class="px-5">OFERTAS ESPECIALES POR WHATSAPP</span><span class="text-brand-amber font-extrabold">•</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SECCIÓN DE VIDEOS PROMOCIONALES Y TRANSPORTADORA FLAASH            -->
+    <!-- ===================================================================== -->
+    <section id="videos" class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal-up">
+          <div>
+            <span class="inline-block px-3.5 py-1 rounded-full bg-pastel-butter text-brand-green text-xs font-bold uppercase tracking-widest mb-3">
+              Transparencia Real
+            </span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green tracking-tight">
+              Conoce cómo trabajamos y nuestras ofertas en video
+            </h2>
+          </div>
+          <p class="text-sm sm:text-base text-[#4B685E] max-w-md">
+            Mira nuestros envíos, campañas activas y la logística rápida con la que llevamos tus productos hasta la puerta de tu hogar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          <!-- Video 1: ./media/video_1.mp4 -->
+          <article class="lg:col-span-4 tilt-surface bg-white rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col reveal-up">
+            <div id="promoVideoBox1" class="relative aspect-video bg-gradient-to-br from-pastel-peach/55 via-pastel-butterLight to-pastel-mint/60 overflow-hidden group">
+              <!-- Se carga automáticamente con JS -->
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-full bg-pastel-peach/50 text-brand-green text-[11px] font-bold uppercase tracking-wider mb-2">
+                  Video Oficial 01
+                </span>
+                <h3 class="font-display font-bold text-lg text-brand-green leading-snug">
+                  Ofertas Especiales de Temporada · Envíos con FLAASH
+                </h3>
+                <p class="text-sm text-[#526D63] mt-1.5">
+                  Descubre nuestras promociones vigentes con entrega directa a domicilio y pago al recibir.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-wa-message="Hola PROVIDENCE 7, vi la sección de Ofertas Especiales de Temporada con envíos FLAASH y quiero consultar las promociones activas."
+                class="wa-direct-trigger w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-pastel-mint/70 hover:bg-brand-green text-brand-green hover:text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>Consultar ofertas por WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 2: ./media/video_2.mp4 -->
+          <article class="lg:col-span-4 tilt-surface bg-white rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col reveal-up">
+            <div id="promoVideoBox2" class="relative aspect-video bg-gradient-to-br from-pastel-mint/65 via-pastel-sky/55 to-pastel-butter/60 overflow-hidden group">
+              <!-- Se carga automáticamente con JS -->
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-full bg-pastel-mint/75 text-brand-green text-[11px] font-bold uppercase tracking-wider mb-2">
+                  Video Oficial 02
+                </span>
+                <h3 class="font-display font-bold text-lg text-brand-green leading-snug">
+                  Providence 7 · Lo mejor para tu familia los 7 días
+                </h3>
+                <p class="text-sm text-[#526D63] mt-1.5">
+                  Así funciona nuestra atención personalizada: eliges, recibes en casa y pagas por tu método favorito.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-wa-message="Hola PROVIDENCE 7, quiero conocer las ofertas de esta semana para mi hogar y familia."
+                class="wa-direct-trigger w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-pastel-butter/85 hover:bg-brand-green text-brand-green hover:text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>Hablar con un asesor</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta Destacada Transportadora FLAASH (soporte ./media/flaash.jpg) -->
+          <article class="lg:col-span-4 tilt-surface bg-gradient-to-b from-white to-pastel-sky/35 rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col reveal-up">
+            <div class="relative aspect-video bg-gradient-to-br from-pastel-sky/80 via-pastel-mint/55 to-pastel-butterLight overflow-hidden flex items-center justify-center">
+              <img
+                id="flaashBannerImg"
+                alt="Transportadora FLAASH — Logística Rápida y Segura"
+                class="hidden w-full h-full object-cover"
+              />
+              <!-- Respaldo ilustrado limpio de Transportadora FLAASH -->
+              <div id="flaashSvgFallback" class="p-6 text-center flex flex-col items-center justify-center">
+                <div class="w-16 h-16 rounded-2xl bg-white/95 border border-brand-border shadow-sm flex items-center justify-center mb-3 text-brand-green">
+                  <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                  </svg>
+                </div>
+                <span class="font-display font-extrabold text-2xl tracking-wider text-brand-green">FLAASH</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-green/70 mt-0.5">
+                  Logística · Rápida · Segura
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-brand-green text-white text-[11px] font-bold shadow-sm">
+                Aliado de Entregas
+              </span>
+            </div>
+
+            <div class="p-5 flex-1 flex flex-col justify-between gap-4">
+              <div>
+                <h3 class="font-display font-bold text-lg text-brand-green leading-snug">
+                  Logística · Rápida · Segura — Llegamos a la puerta de tu casa
+                </h3>
+                <p class="text-sm text-[#526D63] mt-1.5">
+                  Coordinamos tu despacho con seguimiento directo por WhatsApp para que recibas cómodamente en tu hogar u oficina.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-wa-message="Hola PROVIDENCE 7, quiero consultar los tiempos de entrega con Transportadora FLAASH hasta mi zona."
+                class="wa-direct-trigger w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Consultar envío a mi zona</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. SECCIÓN DE CONFIANZA: "PAGAS AL LLEGAR A TU CASA" + COBERTURA      -->
+    <!-- ===================================================================== -->
+    <section id="pago-en-casa" class="py-16 lg:py-24 bg-white/65 border-y border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-pastel-mint text-brand-green text-xs font-bold uppercase tracking-widest mb-3">
+            Cero Riesgos · Máxima Comodidad
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[2.6rem] text-brand-green tracking-tight">
+            Pagas al llegar a tu casa
+          </h2>
+          <p class="text-base text-[#4A675D] mt-3">
+            No necesitas adelantar dinero para comprar con tranquilidad. Recibes tu paquete en la puerta de tu hogar y cancelas en el momento con el medio que prefieras.
+          </p>
+        </div>
+
+        <!-- 4 Tarjetas en Tonos Pasteles Suaves -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          <!-- 1. Pago Móvil (Menta Pastel) -->
+          <div class="tilt-surface rounded-3xl p-6 bg-[#DBFFD6]/65 border border-[#BEEBC0] shadow-soft reveal-up">
+            <div class="w-12 h-12 rounded-2xl bg-white text-brand-green flex items-center justify-center shadow-sm mb-4">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                <path d="M9 8h6"></path>
+                <path d="M9 12h4"></path>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-brand-green mb-1.5">Pago Móvil</h3>
+            <p class="text-sm text-[#2F5246] leading-relaxed">
+              Al instante al recibir tu pedido en casa, desde cualquier banco nacional sin complicaciones.
+            </p>
+          </div>
+
+          <!-- 2. Zelle (Lavanda Suave) -->
+          <div class="tilt-surface rounded-3xl p-6 bg-[#DCD3FF]/60 border border-[#C8BDF7] shadow-soft reveal-up">
+            <div class="w-12 h-12 rounded-2xl bg-white text-brand-green flex items-center justify-center shadow-sm mb-4">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 6h12L6 18h12"></path>
+                <line x1="12" y1="3" x2="12" y2="6"></line>
+                <line x1="12" y1="18" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-brand-green mb-1.5">Zelle</h3>
+            <p class="text-sm text-[#2F5246] leading-relaxed">
+              Rápido y seguro en casa. Verificamos tu transferencia al momento de la entrega.
+            </p>
+          </div>
+
+          <!-- 3. Binance (Amarillo Mantequilla) -->
+          <div class="tilt-surface rounded-3xl p-6 bg-[#FFF5BA]/75 border border-[#F5E38E] shadow-soft reveal-up">
+            <div class="w-12 h-12 rounded-2xl bg-white text-brand-green flex items-center justify-center shadow-sm mb-4">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 22 12 12 22 2 12 12 2"></polygon>
+                <polygon points="12 8 16 12 12 16 8 12 12 8"></polygon>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-brand-green mb-1.5">Binance</h3>
+            <p class="text-sm text-[#2F5246] leading-relaxed">
+              Cripto y USDT sin complicaciones mediante Binance Pay cuando tengas el paquete en tus manos.
+            </p>
+          </div>
+
+          <!-- 4. Efectivo en Divisas (Celeste Agua) -->
+          <div class="tilt-surface rounded-3xl p-6 bg-[#C4FAF8]/70 border border-[#A2E9E6] shadow-soft reveal-up">
+            <div class="w-12 h-12 rounded-2xl bg-white text-brand-green flex items-center justify-center shadow-sm mb-4">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                <circle cx="12" cy="12" r="2.5"></circle>
+                <path d="M6 12h.01M18 12h.01"></path>
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-brand-green mb-1.5">Efectivo en Divisas</h3>
+            <p class="text-sm text-[#2F5246] leading-relaxed">
+              Pagas directo al mensajero de FLAASH al recibir tu compra en tu dirección.
+            </p>
+          </div>
+        </div>
+
+        <!-- Banner Horizontal de Cobertura FLAASH en Venezuela -->
+        <div id="cobertura-flaash" class="rounded-[2rem] bg-white border border-brand-border shadow-soft p-6 sm:p-8 lg:p-10 reveal-up">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-7 border-b border-brand-border">
+            <div>
+              <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pastel-butter text-brand-green text-xs font-bold uppercase tracking-widest mb-2.5">
+                <svg class="w-3.5 h-3.5 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Cobertura FLAASH en Venezuela
+              </span>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-brand-green">
+                Llegamos a tu casa en las principales regiones
+              </h3>
+            </div>
+            <button
+              type="button"
+              data-wa-message="Hola PROVIDENCE 7, quiero verificar si la cobertura de Transportadora FLAASH llega hasta mi dirección."
+              class="wa-direct-trigger magnetic-el inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm shadow-soft shrink-0 cursor-pointer"
+            >
+              <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>Verificar envío a mi dirección por WhatsApp</span>
+            </button>
+          </div>
+
+          <!-- Píldoras pastel por región -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-7">
+            <div class="p-4 rounded-2xl bg-pastel-mint/45 border border-[#CFEFD2]">
+              <p class="font-display font-bold text-brand-green text-base mb-2.5 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                Caracas
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Chacao</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Baruta</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">El Hatillo</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Libertador</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-pastel-butter/55 border border-[#F3E39A]">
+              <p class="font-display font-bold text-brand-green text-base mb-2.5 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-amber"></span>
+                Carabobo
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Valencia</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Naguanagua</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">San Diego</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Guacara</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-pastel-peach/40 border border-[#F5C5BC]">
+              <p class="font-display font-bold text-brand-green text-base mb-2.5 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                Lara
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Barquisimeto (Iribarren)</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Cabudare (Palavecino)</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-pastel-sky/50 border border-[#B2EAE8]">
+              <p class="font-display font-bold text-brand-green text-base mb-2.5 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-amber"></span>
+                Anzoátegui
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Lechería</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Barcelona</span>
+                <span class="px-2.5 py-1 rounded-full bg-white text-xs font-semibold text-brand-green border border-brand-border">Puerto La Cruz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. SECCIÓN ESPECIAL: 3 PRODUCTOS DESTACADOS PARA ENVÍO INMEDIATO      -->
+    <!-- ===================================================================== -->
+    <section id="destacados" class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal-up">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-amber/15 border border-brand-amber/30 text-brand-green text-xs font-bold uppercase tracking-widest mb-3">
+              <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+              Selección Estrella
+            </span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green tracking-tight">
+              3 Productos Destacados Listos para Envío Inmediato
+            </h2>
+          </div>
+          <p class="text-sm sm:text-base text-[#4A675D] max-w-md">
+            Nuestros favoritos de la semana disponibles para despacho rápido. Pregunta por WhatsApp para conocer su oferta especial vigente.
+          </p>
+        </div>
+
+        <!-- Renderizado dinámico desde PRODUCTOS_DESTACADOS -->
+        <div id="featuredProductsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. CATÁLOGO COMPLETO INTERACTIVO (96 PRODUCTOS — SIN PRECIOS)         -->
+    <!-- ===================================================================== -->
+    <section id="catalogo" class="py-16 lg:py-24 bg-white/75 border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 reveal-up">
+          <div>
+            <span class="inline-block px-3.5 py-1 rounded-full bg-pastel-lavender/70 text-brand-green text-xs font-bold uppercase tracking-widest mb-3">
+              Catálogo General · Atención Personalizada
+            </span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green tracking-tight">
+              Explora todo nuestro catálogo
+            </h2>
+            <p class="text-sm sm:text-base text-[#4A675D] mt-2 max-w-2xl">
+              Toca cualquier producto para consultar su precio y oferta especial directo en WhatsApp, o ve guardando varios en tu <strong class="text-brand-green">Lista de Consulta</strong> para preguntar por todos en un solo mensaje.
+            </p>
+          </div>
+
+          <!-- Buscador en tiempo real -->
+          <div class="w-full lg:w-96">
+            <div class="relative">
+              <svg class="w-5 h-5 text-brand-green/50 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                id="catalogSearchInput"
+                type="search"
+                placeholder="Buscar por nombre o necesidad..."
+                aria-label="Buscar producto en el catálogo"
+                class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-[#FDFBF7] border border-brand-border focus:border-brand-green focus:bg-white focus:outline-none text-sm font-medium text-brand-green placeholder:text-[#789288] shadow-sm transition-all"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtros por Categoría en Píldoras Pastel -->
+        <div id="categoryFilterBar" class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar" role="tablist" aria-label="Filtrar por categoría">
+          <!-- Renderizado dinámico -->
+        </div>
+
+        <!-- Barra de conteo de resultados -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6 text-sm">
+          <p id="catalogResultCount" class="font-semibold text-[#4B685E]">
+            Mostrando productos...
+          </p>
+          <button
+            id="clearFiltersBtn"
+            type="button"
+            class="hidden text-xs font-bold text-brand-green hover:text-brand-amber underline underline-offset-4 cursor-pointer"
+          >
+            Limpiar búsqueda y filtros
+          </button>
+        </div>
+
+        <!-- Cuadrícula del Catálogo -->
+        <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <!-- Renderizado dinámico -->
+        </div>
+
+        <!-- Estado Vacío -->
+        <div id="catalogEmptyState" class="hidden text-center py-16 px-6 rounded-3xl bg-[#FDFBF7] border border-dashed border-[#C7DCD2]">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-pastel-butter flex items-center justify-center text-brand-green">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-brand-green mb-2">No encontramos coincidencias exactas</h3>
+          <p class="text-sm text-[#547066] max-w-md mx-auto mb-6">
+            Prueba con otra palabra clave o escríbenos por WhatsApp y te ayudamos a conseguir el producto que buscas.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <button id="emptyResetBtn" type="button" class="px-5 py-3 rounded-2xl bg-white border border-brand-border font-bold text-sm text-brand-green hover:bg-pastel-mint/50 cursor-pointer">
+              Ver todo el catálogo
+            </button>
+            <button
+              type="button"
+              data-wa-message="Hola PROVIDENCE 7, estoy buscando un producto especial y quisiera asesoría por WhatsApp."
+              class="wa-direct-trigger px-5 py-3 rounded-2xl bg-brand-green text-white font-bold text-sm hover:bg-brand-greenHover cursor-pointer"
+            >
+              Preguntar por WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Paginación Limpia: Mostrar más / Ver todos -->
+        <div id="catalogPaginationBar" class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <button
+            id="loadMoreBtn"
+            type="button"
+            class="magnetic-el inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm shadow-soft cursor-pointer"
+          >
+            <span>Mostrar más productos</span>
+            <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <button
+            id="showAllBtn"
+            type="button"
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-pastel-butter/60 border border-brand-border text-brand-green font-bold text-sm cursor-pointer transition-colors"
+          >
+            Ver todos los resultados
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- BANNER FINAL DE ATENCIÓN PERSONALIZADA                                -->
+    <!-- ===================================================================== -->
+    <section class="py-14 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-[2.2rem] bg-gradient-to-br from-pastel-mint/75 via-pastel-butterLight/90 to-pastel-peach/55 border border-white shadow-soft p-8 sm:p-12 text-center reveal-up">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-white text-brand-green text-xs font-bold uppercase tracking-widest shadow-sm mb-4">
+            Ofertas Especiales Diarias
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-green max-w-2xl mx-auto leading-tight">
+            ¿Te gustó algo o quieres consultar combos especiales?
+          </h2>
+          <p class="text-base text-[#36554A] max-w-xl mx-auto mt-3 mb-7">
+            Nuestro equipo te responde directamente por WhatsApp para enviarte precios actualizados, ofertas especiales y coordinar tu pago contra entrega en casa.
+          </p>
+          <button
+            type="button"
+            data-wa-message="Hola PROVIDENCE 7, quiero recibir atención personalizada y conocer las ofertas especiales de hoy."
+            class="wa-direct-trigger magnetic-el inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-base shadow-lift cursor-pointer"
+          >
+            <svg class="w-5 h-5 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>Escribir al WhatsApp +58 422-0596568</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- FOOTER LIMPIO EN VERDE BOSQUE CORPORATIVO (#0B4A35)                     -->
+  <!-- ======================================================================= -->
+  <footer class="bg-brand-green text-[#E7F3EE] pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15">
+        <!-- Marca -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-10 h-9" viewBox="0 0 120 106" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M50 94H14L60 12L106 94H65" stroke="#FFFFFF" stroke-width="10.5" stroke-linecap="butt" stroke-linejoin="miter" />
+              <path d="M73 53C81.5 56 84 67.5 76.5 74C72.5 77.5 66 78 59.5 78" stroke="#FFFFFF" stroke-width="9.5" stroke-linecap="butt" />
+              <path d="M47 46H73.5L47.5 98H37L59.5 55.5H43L47 46Z" fill="#F29F05" />
+            </svg>
+            <span class="font-display font-extrabold text-xl tracking-tight text-white">
+              PROVIDENCE<span class="text-brand-amber">7</span>
+            </span>
+          </div>
+          <p class="text-sm text-white/75 leading-relaxed">
+            Lo mejor para tu hogar y familia los 7 días de la semana. Atención humana y directa por WhatsApp con pago al recibir en casa.
+          </p>
+        </div>
+
+        <!-- Métodos de pago -->
+        <div>
+          <h4 class="font-display font-bold text-sm uppercase tracking-widest text-brand-amber mb-4">
+            Pagos al Recibir
+          </h4>
+          <ul class="space-y-2.5 text-sm text-white/80">
+            <li>Pago Móvil al instante</li>
+            <li>Zelle en casa</li>
+            <li>Binance / USDT</li>
+            <li>Efectivo en Divisas</li>
+          </ul>
+        </div>
+
+        <!-- Cobertura FLAASH -->
+        <div>
+          <h4 class="font-display font-bold text-sm uppercase tracking-widest text-brand-amber mb-4">
+            Cobertura FLAASH
+          </h4>
+          <ul class="space-y-2.5 text-sm text-white/80">
+            <li>Caracas (Chacao, Baruta, El Hatillo, Libertador)</li>
+            <li>Carabobo (Valencia, Naguanagua, San Diego, Guacara)</li>
+            <li>Lara (Barquisimeto, Cabudare)</li>
+            <li>Anzoátegui (Lechería, Barcelona, Puerto La Cruz)</li>
+          </ul>
+        </div>
+
+        <!-- Contacto Directo -->
+        <div>
+          <h4 class="font-display font-bold text-sm uppercase tracking-widest text-brand-amber mb-4">
+            Atención Directa
+          </h4>
+          <p class="text-sm text-white/80 mb-4">
+            Consultas de precios, ofertas especiales y coordinación de entregas exclusivamente por WhatsApp oficial:
+          </p>
+          <a
+            href="https://wa.me/584220596568?text=Hola%20PROVIDENCE%207%2C%20quisiera%20recibir%20atenci%C3%B3n%20personalizada."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-amber hover:bg-[#ffae1a] text-brand-green font-bold text-sm transition-colors shadow-amberGlow"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>+58 422-0596568</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/65">
+        <p>&copy; <span id="footerYear">2026</span> PROVIDENCE 7. Todos los derechos reservados.</p>
+        <p>Envíos con Transportadora FLAASH · Pago contra entrega en Venezuela</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- MODAL DE VISTA RÁPIDA DE PRODUCTO (SIN PRECIOS)                         -->
+  <!-- ======================================================================= -->
+  <div id="quickViewModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 bg-[#0B4A35]/45 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <div class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-[2rem] border border-brand-border shadow-2xl">
+      <button
+        id="qvCloseBtn"
+        type="button"
+        aria-label="Cerrar vista rápida"
+        class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/95 border border-brand-border text-brand-green hover:bg-pastel-butter flex items-center justify-center cursor-pointer shadow-sm"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-12">
+        <!-- Media del Producto -->
+        <div id="qvMediaSlot" class="md:col-span-5 min-h-[250px] flex items-center justify-center p-6"></div>
+
+        <!-- Información y Botones WhatsApp -->
+        <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span id="qvCategoryBadge" class="px-3 py-1 rounded-full text-xs font-bold text-brand-green"></span>
+              <span class="px-3 py-1 rounded-full bg-pastel-butter text-brand-green text-xs font-bold">Pago al llegar a casa</span>
+            </div>
+            <h3 id="qvTitle" class="font-display font-extrabold text-2xl text-brand-green leading-snug mb-3"></h3>
+            <p id="qvDescription" class="text-sm sm:text-base text-[#4A675D] leading-relaxed mb-4"></p>
+
+            <div class="p-4 rounded-2xl bg-[#FDFBF7] border border-brand-border space-y-2.5">
+              <p class="text-xs font-bold uppercase tracking-wider text-brand-green flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+                Precio y oferta especial por WhatsApp
+              </p>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-[#3F5D52]">
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-brand-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Pagas al recibir: Pago Móvil, Zelle, Binance o Efectivo.
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-brand-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Envío seguro a tu puerta con Transportadora FLAASH.
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-brand-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Atención 100% personalizada y descuentos por combo.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button
+              id="qvWhatsappBtn"
+              type="button"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm shadow-soft cursor-pointer"
+            >
+              <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>Consultar precio por WhatsApp</span>
+            </button>
+            <button
+              id="qvToggleConsultBtn"
+              type="button"
+              class="px-5 py-3.5 rounded-2xl bg-pastel-butter/80 hover:bg-pastel-butter text-brand-green font-bold text-sm border border-[#F0DC84] cursor-pointer"
+            >
+              + Sumar a mi consulta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- PANEL DESPLEGABLE: LISTA DE CONSULTA MÚLTIPLE (SIN PRECIOS)             -->
+  <!-- ======================================================================= -->
+  <div id="consultDrawerBackdrop" class="fixed inset-0 z-[75] hidden bg-[#0B4A35]/35 backdrop-blur-xs"></div>
+  <aside id="consultDrawer" class="fixed top-0 right-0 z-[80] w-full max-w-md h-full bg-[#FDFBF7] border-l border-brand-border shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col" role="dialog" aria-modal="true" aria-label="Mi Lista de Consulta">
+    <div class="px-6 py-5 bg-white border-b border-brand-border flex items-center justify-between">
+      <div>
+        <h2 class="font-display font-extrabold text-xl text-brand-green">Mi Lista de Consulta</h2>
+        <p id="consultDrawerSub" class="text-xs font-medium text-[#5A756B]">0 productos seleccionados</p>
+      </div>
+      <button
+        id="closeConsultDrawerBtn"
+        type="button"
+        aria-label="Cerrar lista de consulta"
+        class="w-10 h-10 rounded-xl bg-[#FDFBF7] border border-brand-border text-brand-green hover:bg-pastel-butter flex items-center justify-center cursor-pointer"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Lista de productos guardados -->
+      <div id="consultItemsList" class="space-y-3"></div>
+
+      <!-- Estado vacío de la lista -->
+      <div id="consultEmptyBox" class="text-center py-12 px-4">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-pastel-mint/75 text-brand-green flex items-center justify-center">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect></svg>
+        </div>
+        <h3 class="font-display font-bold text-lg text-brand-green mb-1.5">Tu lista está vacía</h3>
+        <p class="text-sm text-[#547066] mb-5">
+          Toca <strong>"+ Guardar"</strong> en los productos que te interesen para consultar precios y ofertas de todos juntos por WhatsApp.
+        </p>
+        <button id="consultExploreBtn" type="button" class="px-5 py-3 rounded-2xl bg-brand-green text-white font-bold text-sm cursor-pointer">
+          Explorar Catálogo
+        </button>
+      </div>
+
+      <!-- Campos opcionales para agilizar la atención -->
+      <div id="consultExtraFields" class="hidden pt-4 border-t border-brand-border space-y-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-brand-green">
+          Datos opcionales para atenderte más rápido
+        </p>
+        <div>
+          <label for="consultUserName" class="block text-xs font-semibold text-[#4E6B60] mb-1">Tu nombre</label>
+          <input id="consultUserName" type="text" placeholder="Ej. María González" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-brand-border text-sm text-brand-green focus:border-brand-green focus:outline-none" />
+        </div>
+        <div>
+          <label for="consultUserCity" class="block text-xs font-semibold text-[#4E6B60] mb-1">Ciudad / Zona de entrega</label>
+          <input id="consultUserCity" type="text" placeholder="Ej. Chacao, Valencia, Barquisimeto o Lechería" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-brand-border text-sm text-brand-green focus:border-brand-green focus:outline-none" />
+        </div>
+      </div>
+    </div>
+
+    <div id="consultDrawerFooter" class="hidden p-5 bg-white border-t border-brand-border space-y-2.5">
+      <button
+        id="sendAllConsultWaBtn"
+        type="button"
+        class="w-full inline-flex items-center justify-center gap-2 px-5 py-4 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm shadow-soft cursor-pointer"
+      >
+        <svg class="w-5 h-5 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        <span>Consultar todos por WhatsApp</span>
+      </button>
+      <button
+        id="clearConsultListBtn"
+        type="button"
+        class="w-full py-2 text-xs font-semibold text-[#647E74] hover:text-brand-green cursor-pointer"
+      >
+        Vaciar lista de consulta
+      </button>
+    </div>
+  </aside>
+
+  <!-- ======================================================================= -->
+  <!-- BOTÓN FLOTANTE PERSISTENTE DE WHATSAPP                                  -->
+  <!-- ======================================================================= -->
+  <a
+    id="floatingWaBtn"
+    href="https://wa.me/584220596568?text=Hola%20PROVIDENCE%207%2C%20quisiera%20consultar%20precios%20y%20ofertas%20especiales%20disponibles."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escribir a PROVIDENCE 7 por WhatsApp"
+    class="wa-pulse-btn magnetic-el fixed right-4 bottom-4 sm:right-6 sm:bottom-6 z-40 inline-flex items-center gap-2.5 px-4 sm:px-5 py-3.5 rounded-full bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm border-2 border-brand-amber/80"
+  >
+    <svg class="w-5 h-5 text-brand-amber shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+    <span class="hidden sm:inline">WhatsApp Directo</span>
+  </a>
+
+  <!-- NOTIFICACIÓN TOAST LIMPIA (CERO ALERTS) -->
+  <div id="toastBar" class="fixed left-1/2 bottom-6 -translate-x-1/2 translate-y-6 opacity-0 pointer-events-none z-[90] inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-brand-green text-white text-sm font-semibold shadow-lift border border-brand-amber/60 transition-all duration-300" role="status" aria-live="polite">
+    <span class="w-2.5 h-2.5 rounded-full bg-brand-amber"></span>
+    <span id="toastMessage">Guardado en tu lista de consulta</span>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- MOTOR DE CONFIGURACIÓN, CATÁLOGO (96 PRODUCTOS) E INTERACTIVIDAD        -->
+  <!-- ======================================================================= -->
+  <script>
+    /* =========================================================================
+       PASO 1: CONFIGURACIÓN PRINCIPAL (EDITA AQUÍ TUS ARCHIVOS DE GITHUB)
+       =========================================================================
+       Cómo cargar tus videos, logo y fotos gratis en GitHub Pages:
+       1. En tu repositorio de GitHub, crea una carpeta llamada: media
+       2. Sube tus archivos dentro de "media" usando estos nombres exactos
+          (o cambia el nombre abajo para que coincida con tu archivo):
+            - media/logo.jpeg        (tu logo en imagen)
+            - media/logo.gif         (tu logo animado)
+            - media/flaash.jpg       (banner de Transportadora FLAASH)
+            - media/video_1.mp4      (video de ofertas de temporada)
+            - media/video_2.mp4      (video institucional Providence 7)
+            - media/destacado_1.mp4  (foto o video de tu producto estrella #1)
+            - media/destacado_2.mp4  (foto o video de tu producto estrella #2)
+            - media/destacado_3.mp4  (foto o video de tu producto estrella #3)
+       Nota: Si un archivo aún no está subido, la página mostrará automáticamente
+       un diseño pastel elegante sin ningún ícono roto.
+    */
+    const WHATSAPP_NUMBER = "584220596568"; // Número oficial +58 422-0596568 (sin + ni espacios)
+
+    const BRAND_MEDIA = {
+      logoImage: "./media/logo.jpeg",     // Opcional: si existe, reemplaza el logo SVG superior
+      logoGif: "./media/logo.gif",        // Opcional: se muestra en la tarjeta principal del Hero
+      flaashBanner: "./media/flaash.jpg", // Opcional: imagen de Transportadora FLAASH
+      video1: "./media/video_1.mp4",      // Video promocional 1 (Ofertas de temporada)
+      video2: "./media/video_2.mp4"       // Video promocional 2 (Providence 7 · 7 días)
+    };
+
+    /* =========================================================================
+       PASO 2: TUS 3 PRODUCTOS ESTRELLA LISTOS PARA ENVÍO INMEDIATO
+       =========================================================================
+       Puedes poner tanto un video (.mp4 / .webm) como una foto (.jpg / .png / .webp)
+       en la propiedad `media`. Si aún no subes el archivo, se muestra un arte pastel limpio.
+    */
+    const PRODUCTOS_DESTACADOS = [
+      {
+        id: "destacado-kit-solar",
+        name: "Kit Solar Portátil con 3 Ampolletas Solares",
+        category: "Hogar",
+        badge: "Envío inmediato · Oferta especial",
+        media: "./media/destacado_1.mp4", // Cambia a .jpg o .png si prefieres foto
+        pastelBg: "from-[#FFF5BA]/80 via-[#FFFFD1] to-[#DBFFD6]/75",
+        desc: "Iluminación autónoma y carga práctica para tu hogar ante cortes eléctricos o salidas familiares. Incluye panel solar eficiente y 3 bombillos LED de bajo consumo."
+      },
+      {
+        id: "destacado-medicube-pdrn",
+        name: "Medicube Crema Cápsula Salmón ADN PDRN",
+        category: "Belleza",
+        badge: "Envío inmediato · Oferta especial",
+        media: "./media/destacado_2.mp4", // Cambia a .jpg o .png si prefieres foto
+        pastelBg: "from-[#FFC9DE]/75 via-[#FBE4FF] to-[#FFCBC1]/65",
+        desc: "Fórmula coreana con cápsulas de Salmón ADN PDRN que revitalizan la elasticidad, aportan hidratación profunda y dejan un brillo luminoso y saludable en tu piel."
+      },
+      {
+        id: "destacado-boxeo-musical",
+        name: "Máquina de Boxeo Musical Bluetooth",
+        category: "Tecnología",
+        badge: "Envío inmediato · Oferta especial",
+        media: "./media/destacado_3.mp4", // Cambia a .jpg o .png si prefieres foto
+        pastelBg: "from-[#C4FAF8]/80 via-[#ACE7FF]/70 to-[#DCD3FF]/65",
+        desc: "Entrena en casa al ritmo de tu música favorita con luces reactivas y conexión Bluetooth. Ideal para liberar estrés y disfrutar ejercicio dinámico en familia."
+      }
+    ];
+
+    /* =========================================================================
+       PASO 3: CATÁLOGO COMPLETO DE 96 PRODUCTOS (SIN PRECIOS)
+       =========================================================================
+       Para agregar foto o video a cualquier producto, solo coloca la ruta en `media`:
+       ejemplo: media: "./media/producto_3.jpg" o "./media/producto_3.mp4"
+    */
+    const CATALOGO_PRODUCTOS = [
+      { id: 1, name: "Potente Destapador de Tuberías", category: "Hogar", media: "", desc: "Disuelve obstrucciones difíciles en lavamanos, duchas y fregaderos en minutos sin dañar tus cañerías." },
+      { id: 2, name: "Crema Antihongos para Uñas Nails Fungus", category: "Salud", media: "", desc: "Fórmula tópica de acción profunda pensada para restaurar el aspecto sano, limpio y uniforme de tus uñas." },
+      { id: 3, name: "Medicube Crema Cápsula Salmón ADN PDRN", category: "Belleza", media: "", desc: "Tratamiento coreano con cápsulas activas de PDRN para mejorar la firmeza, hidratación y luminosidad facial." },
+      { id: 4, name: "Bálsamo Orgánico Sebo de Res y Miel Tallow", category: "Belleza", media: "", desc: "Nutrición intensiva de origen natural con miel pura para reparar piel reseca, sensible o agrietada." },
+      { id: 5, name: "Gomitas Naturales para Dormir Lullabites Sweet", category: "Salud", media: "", desc: "Deliciosas gomitas con ingredientes relajantes que favorecen un descanso profundo y un despertar renovado." },
+      { id: 6, name: "Sérum Facial Antiarrugas Péptidos Bosin", category: "Belleza", media: "", desc: "Concentrado ligero con complejo de péptidos que suaviza líneas de expresión y aporta textura sedosa al rostro." },
+      { id: 7, name: "Set 8 Piezas Decoración Pared Nubes y Luna", category: "Hogar", media: "", desc: "Apliques decorativos encantadores para transformar habitaciones infantiles y espacios acogedores en minutos." },
+      { id: 8, name: "Trípode Holder Estabilizador para Celular", category: "Tecnología", media: "", desc: "Soporte ergonómico y estable para grabar videos fluidos, hacer videollamadas o tomar fotos nítidas." },
+      { id: 9, name: "Bidet de Baño Portátil Plegable", category: "Salud", media: "", desc: "Diseño higiénico, compacto y fácil de instalar para mayor comodidad diaria en casa o durante viajes." },
+      { id: 10, name: "Aceite Reafirmante Corporal Magic", category: "Belleza", media: "", desc: "Aceite de rápida absorción que hidrata profundamente mientras ayuda a tonificar y suavizar la piel del cuerpo." },
+      { id: 11, name: "Máquina de Boxeo Musical Bluetooth", category: "Tecnología", media: "", desc: "Panel interactivo con luces LED y audio Bluetooth para entrenar reflejos, cardio y ritmo desde casa." },
+      { id: 12, name: "Capibara Peluche que Respira Calma Ansiedad", category: "Bebé", media: "", desc: "Tierno compañero ultrasuave con movimiento rítmico de respiración y luz cálida para conciliar el sueño." },
+      { id: 13, name: "Máquina Raspadora de Helados Enrollados", category: "Hogar", media: "", desc: "Prepara deliciosos helados artesanales en rollo en casa junto a los niños con frutas y toppings favoritos." },
+      { id: 14, name: "Masajeador Facial Rejuvenecedor Portátil", category: "Tecnología", media: "", desc: "Dispositivo compacto de microvibración suave que estimula la circulación y potencia tus cremas faciales." },
+      { id: 15, name: "Spray Potencializador Masculino Retardante", category: "Salud", media: "", desc: "Fórmula discreta de fácil aplicación diseñada para brindar mayor confianza, control y bienestar íntimo." },
+      { id: 16, name: "Honey Stick Palitos de Miel con Shilajit Energía", category: "Salud", media: "", desc: "Prácticos sobres individuales de miel natural enriquecida con shilajit para impulsar tu vitalidad diaria." },
+      { id: 17, name: "Aceite para Masajes Anticelulitis 8 fl oz", category: "Belleza", media: "", desc: "Mezcla botánica nutritiva ideal para masajes moldeadores que dejan la piel más tersa y revitalizada." },
+      { id: 18, name: "Masajeador Facial y Cuello Antiarrugas LED", category: "Belleza", media: "", desc: "Combina terapia de luz LED y contorno ergonómico para reafirmar el óvalo facial y cuidar el cuello." },
+      { id: 19, name: "Mega Set de Arte de 208 Piezas para Niños", category: "Juguetería", media: "", desc: "Maletín creativo completo con colores, acuarelas, marcadores y accesorios para despertar su imaginación." },
+      { id: 20, name: "Suplemento Dietético Desintoxicante de Hígado", category: "Salud", media: "", desc: "Fórmula balanceada de apoyo diario pensada para acompañar el bienestar digestivo y metabólico." },
+      { id: 21, name: "Crema Reafirmante Lifting para Cuello", category: "Belleza", media: "", desc: "Crema de textura aterciopelada diseñada especialmente para hidratar, tensar y cuidar la piel del cuello." },
+      { id: 22, name: "16 Parches Tratamiento Hongo de Uñas", category: "Belleza", media: "", desc: "Parches cómodos de liberación prolongada que actúan mientras descansas para proteger y renovar la uña." },
+      { id: 23, name: "Raqueta Eléctrica Mata Insectos USB", category: "Hogar", media: "", desc: "Recargable por USB con rejilla de seguridad para mantener tus tardes y noches libres de mosquitos." },
+      { id: 24, name: "Crema Tratamiento Hongos de Uñas", category: "Salud", media: "", desc: "Cuidado práctico de rápida penetración que ayuda a mejorar la apariencia y fortaleza de uñas maltratadas." },
+      { id: 25, name: "Set Destornillador Eléctrico Portátil", category: "Herramientas", media: "", desc: "Kit recargable con múltiples puntas de precisión ideal para reparaciones del hogar y armado de muebles." },
+      { id: 26, name: "Aceite Rejuvenecedor Reafirmante Lefun", category: "Belleza", media: "", desc: "Elixir ligero que aporta elasticidad, suavidad duradera y un acabado luminoso natural en la piel." },
+      { id: 27, name: "Rodillera Larga de Compresión Alivia Dolor", category: "Ropa Deportiva", media: "", desc: "Tejido elástico transpirable con soporte anatómico para entrenar, caminar o aliviar tensión en la rodilla." },
+      { id: 28, name: "Her Loss Perfume con Feromonas 50 ml", category: "Belleza", media: "", desc: "Fragancia cautivadora de larga duración formulada para dejar una estela elegante y memorable." },
+      { id: 29, name: "Crema Adeus para Estrías y Celulitis", category: "Belleza", media: "", desc: "Hidratación intensa enfocada en mejorar la elasticidad cutánea y atenuar visiblemente la piel de naranja." },
+      { id: 30, name: "Short Deportivo Sauna Moldeador Negro", category: "Ropa Deportiva", media: "", desc: "Ajuste cómodo de efecto térmico que acompaña tus rutinas de ejercicio y moldea tu silueta al instante." },
+      { id: 31, name: "Caja de 200 Clavos para Pistola Fulminante", category: "Herramientas", media: "", desc: "Repuesto resistente de acero endurecido para fijaciones firmes y rápidas en trabajos de construcción o bricolaje." },
+      { id: 32, name: "Bolso Cruzado Bandolera Antirrobo USB", category: "Moda", media: "", desc: "Diseño urbano moderno con compartimentos ocultos y puerto externo USB para llevar tus esenciales seguros." },
+      { id: 33, name: "Linterna Martillo LED Táctica 4 en 1", category: "Tecnología", media: "", desc: "Herramienta multifunción de emergencia para el auto o el hogar con luz potente, martillo y cortacinturón." },
+      { id: 34, name: "Crema Limpiadora de Ollas Multiusos", category: "Hogar", media: "", desc: "Remueve grasa quemada y manchas difíciles devolviendo el brillo original a ollas, sartenes y acero inoxidable." },
+      { id: 35, name: "Kit de Limpieza Premium para Zapatillas", category: "Bienestar", media: "", desc: "Espuma limpiadora y cepillo suave que dejan tus zapatos deportivos impecables sin dañar telas ni suelas." },
+      { id: 36, name: "Mini Aspiradora Portátil 3 en 1", category: "Hogar", media: "", desc: "Potente succión inalámbrica para limpiar teclados, sillones, esquinas difíciles y el interior del carro." },
+      { id: 37, name: "Gotas de Colágeno Pelaje Brillante Mascotas", category: "Mascotas", media: "", desc: "Suplemento líquido fácil de mezclar en la comida para fortalecer el pelaje y cuidar las articulaciones de tu mascota." },
+      { id: 38, name: "Neurocontrol Portátil Ayuda Sueño y Ánimo", category: "Tecnología", media: "", desc: "Dispositivo ligero de mano con pulsos suaves diseñado para favorecer la relajación al final del día." },
+      { id: 39, name: "Chaleco Corrector de Postura Cruzado", category: "Ropa Deportiva", media: "", desc: "Soporte ergonómico discreto bajo la ropa que ayuda a alinear espalda y hombros con comodidad diaria." },
+      { id: 40, name: "Pulsera Amor Corazón Infinito para Dama", category: "Bisutería", media: "", desc: "Detalle femenino delicado con brillo sutil, perfecto para regalar o complementar cualquier atuendo." },
+      { id: 41, name: "Nicotinamide Riboside + Resveratrol", category: "Salud", media: "", desc: "Combinación antioxidante de vanguardia orientada al bienestar celular, vitalidad y cuidado diario." },
+      { id: 42, name: "Cepillo Masajeador Pulverizador para Mascotas", category: "Mascotas", media: "", desc: "Retira el pelo suelto mientras libera vapor suave para dejar el pelaje limpio, desenredado y sin estrés." },
+      { id: 43, name: "Kit Profesional Cortadora de Pelo Mascotas", category: "Mascotas", media: "", desc: "Máquina silenciosa y recargable con peines guía para mantener arreglado a tu perro o gato en casa." },
+      { id: 44, name: "Kit Líquido Reparación Parabrisas de Carro", category: "Vehículos", media: "", desc: "Resina transparente práctica para sellar pequeñas grietas o impactos y evitar que se extiendan en el vidrio." },
+      { id: 45, name: "Extractor de Leche Eléctrico Silencioso USB", category: "Tecnología", media: "", desc: "Diseño cómodo manos libres, suave y recargable que facilita la rutina diaria de las mamás modernas." },
+      { id: 46, name: "Pistola Manual Fulminante de Clavos", category: "Herramientas", media: "", desc: "Herramienta robusta de alta precisión para fijar madera, metal o concreto con rapidez y mínimo esfuerzo." },
+      { id: 47, name: "Perfume Hombre Allure Her con Feromonas", category: "Belleza", media: "", desc: "Aroma masculino intenso y sofisticado con notas frescas y amaderadas que acompañan toda la jornada." },
+      { id: 48, name: "Clip Dispositivo Antirronquidos", category: "Bienestar", media: "", desc: "Pequeño clip ergonómico suave que mejora el flujo de aire nasal para noches más silenciosas y tranquilas." },
+      { id: 49, name: "Parches Almohadilla de Pies para Dormir", category: "Salud", media: "", desc: "Almohadillas con extractos herbales de uso nocturno pensadas para brindar sensación de descanso al despertar." },
+      { id: 50, name: "Mezcla de Bebida en Polvo Suplemento", category: "Salud", media: "", desc: "Fórmula práctica de fácil disolución para preparar tu bebida nutritiva diaria en segundos." },
+      { id: 51, name: "Hair Bliss Crema Alisadora Pelo Radiante", category: "Belleza", media: "", desc: "Controla el frizz y deja el cabello visiblemente más liso, manejable y con brillo natural." },
+      { id: 52, name: "Fuente Biónica Solar Decoración Jardín", category: "Hogar", media: "", desc: "Funciona con luz solar sin cables ni baterías para darle movimiento y frescura a patios, balcones o fuentes." },
+      { id: 53, name: "Camiseta Reductora para Hombre", category: "Moda", media: "", desc: "Prenda de compresión cómoda e invisible bajo camisas que estiliza el torso y brinda soporte postural." },
+      { id: 54, name: "Mezcla Café Achicoria con Champiñones Ryze", category: "Salud", media: "", desc: "Alternativa suave y aromática con hongos funcionales para disfrutar enfoque y energía equilibrada cada mañana." },
+      { id: 55, name: "Tensiómetro Digital Portátil para Brazo", category: "Tecnología", media: "", desc: "Pantalla amplia de lectura clara y medición automática precisa para monitorear tu bienestar en casa." },
+      { id: 56, name: "Aceite de Orégano 6000 mg 60 Cápsulas", category: "Belleza", media: "", desc: "Cápsulas blandas concentradas de origen natural ideales como complemento para tu rutina diaria de cuidado." },
+      { id: 57, name: "Base Maquillaje BB Cream Alta Duración", category: "Belleza", media: "", desc: "Cobertura ligera y uniforme con acabado natural que hidrata la piel y resiste largas horas del día." },
+      { id: 58, name: "Kit Solar Portátil 3 Ampolletas Solares", category: "Hogar", media: "", desc: "Estación recargable con panel solar y 3 bombillos LED para tener luz confiable y carga USB donde la necesites." },
+      { id: 59, name: "Resina Shilajit Orgánica del Himalaya 30 g", category: "Salud", media: "", desc: "Resina mineral purificada rica en ácido fúlvico para apoyar el rendimiento físico y la vitalidad natural." },
+      { id: 60, name: "Alfombra Masajeadora de Pies Electroestimulación", category: "Tecnología", media: "", desc: "Tapete plegable con distintos modos e intensidades para relajar pies cansados tras un día activo." },
+      { id: 61, name: "Cepillo Alisador y Rizador Multifuncional", category: "Tecnología", media: "", desc: "Estiliza tu cabello en pocos minutos con control uniforme de temperatura para lograr ondas o liso natural." },
+      { id: 62, name: "Auricular Conducción Ósea Bluetooth USB", category: "Tecnología", media: "", desc: "Escucha tu música y llamadas manteniendo tus oídos libres para correr, manejar bici o trabajar con seguridad." },
+      { id: 63, name: "Slim Magic Gel Lipo Reductor", category: "Belleza", media: "", desc: "Gel refrescante de rápida absorción ideal para masajes diarios en abdomen, cintura y zonas localizadas." },
+      { id: 64, name: "Cargador de Auto Inteligente Batería 12V", category: "Tecnología", media: "", desc: "Cargador digital compacto con protección inteligente para mantener y recuperar baterías de carros y motos." },
+      { id: 65, name: "Corrector de Juanete Ortopédico", category: "Salud", media: "", desc: "Diseño anatómico acolchado que ayuda a alinear suavemente el dedo y reducir molestias al caminar." },
+      { id: 66, name: "Crema Veneno de Abeja Dolor Articulaciones", category: "Salud", media: "", desc: "Bálsamo reconfortante para masajes en rodillas, espalda, manos y zonas con tensión articular." },
+      { id: 67, name: "Faja Cinturilla Velcros Abdominal Moldeadora", category: "Ropa Deportiva", media: "", desc: "Ajuste firme y adaptable con doble velcro para brindar soporte lumbar y realzar la cintura al entrenar." },
+      { id: 68, name: "Ambientador Pato Piloto para Carro", category: "Hogar", media: "", desc: "Divertido difusor aromático con hélice giratoria para la rejilla del aire que perfuma y decora tu vehículo." },
+      { id: 69, name: "Suero Facial Vitamina C Elixir Beauty", category: "Belleza", media: "", desc: "Aporta luminosidad inmediata, ayuda a emparejar el tono y protege el rostro frente al estrés ambiental." },
+      { id: 70, name: "Aceite Capilar Biotina Crecimiento Cabello", category: "Belleza", media: "", desc: "Fórmula nutritiva con biotina para fortalecer la raíz, reducir el quiebre y lucir una melena más abundante." },
+      { id: 71, name: "Reloj Negro Inteligente T55", category: "Moda", media: "", desc: "Smartwatch moderno con notificaciones, conteo de pasos y correa deportiva cómoda para el uso diario." },
+      { id: 72, name: "Dilatador Nasal Magnético Antirronquidos", category: "Salud", media: "", desc: "Cómodo soporte nasal reutilizable diseñado para facilitar la respiración nocturna y mejorar el descanso." },
+      { id: 73, name: "Masajeador con Dedos 4D Cuello y Hombros", category: "Tecnología", media: "", desc: "Simula un masaje profesional profundo con calor reconfortante para liberar contracturas en minutos." },
+      { id: 74, name: "Parches GLP-1 Naturales Control de Peso", category: "Salud", media: "", desc: "Parches transdérmicos prácticos y discretos elaborados con extractos botánicos para acompañar hábitos saludables." },
+      { id: 75, name: "Gel Morado Alivio Dolor Articular", category: "Salud", media: "", desc: "Gel tópico de efecto refrescante rápido ideal para masajear músculos fatigados y articulaciones." },
+      { id: 76, name: "Limpiador Potente Destapa Cañerías Wild", category: "Hogar", media: "", desc: "Fórmula concentrada de limpieza profunda que elimina residuos acumulados y malos olores en desagües." },
+      { id: 77, name: "Suero Facial Antiedad Elixir Beauty", category: "Belleza", media: "", desc: "Hidratación reparadora diaria que suaviza líneas finas y devuelve frescura a tu piel mañana y noche." },
+      { id: 78, name: "Lentes Bifocales Smart Zoom con Filtro", category: "Bisutería", media: "", desc: "Montura ligera y elegante con ajuste inteligente para leer con nitidez y proteger tu vista frente a pantallas." },
+      { id: 79, name: "Perfume Top Shetl Her Loss", category: "Belleza", media: "", desc: "Esencia envolvente de gran fijación con notas sofisticadas ideal para destacar en ocasiones especiales." },
+      { id: 80, name: "Lentes de Sol Polarizados Negros Dubery", category: "Moda", media: "", desc: "Estilo clásico con lentes polarizados que reducen reflejos intensos al conducir o disfrutar actividades al aire libre." },
+      { id: 81, name: "Cinturón de Levantamiento Gym Unisex", category: "Salud", media: "", desc: "Estabilidad y protección lumbar firme para entrenamientos de fuerza, sentadillas y rutinas de gimnasio." },
+      { id: 82, name: "Collar Giratorio de Girasol Antiestrés", category: "Bisutería", media: "", desc: "Dije encantador con pétalos giratorios que combina elegancia diaria con un toque relajante al tacto." },
+      { id: 83, name: "Sérum Anua Niacinamida + Ácido Tranexámico", category: "Belleza", media: "", desc: "Favorito del skincare coreano para atenuar manchas, equilibrar poros y lograr un tono más uniforme." },
+      { id: 84, name: "Rueda Abdominal Rebote Ejercicio", category: "Deportes", media: "", desc: "Sistema de rebote automático con soporte cómodo para codos que hace más seguro y efectivo entrenar tu abdomen." },
+      { id: 85, name: "Bodywise Suero Crecimiento Cabello Romero", category: "Belleza", media: "", desc: "Sérum ligero con extracto de romero que revitaliza el cuero cabelludo y estimula un cabello más fuerte." },
+      { id: 86, name: "Masajeador Eléctrico Corrector Facial", category: "Tecnología", media: "", desc: "Equipo ergonómico con suaves pulsos reafirmantes para tonificar el contorno facial cómodamente en casa." },
+      { id: 87, name: "Cepillo Masajeador Cabello Terapia de Luz", category: "Tecnología", media: "", desc: "Masajea suavemente el cuero cabelludo mientras aplica luz LED relajante para una rutina capilar renovadora." },
+      { id: 88, name: "Mini Aire Acondicionado Portátil", category: "Hogar", media: "", desc: "Enfriador personal compacto y silencioso ideal para refrescar escritorios, habitaciones o mesas de noche." },
+      { id: 89, name: "345 Relief Crema Reparadora Hidratante", category: "Belleza", media: "", desc: "Crema en gel calmante muy popular en skincare coreano para reparar la barrera cutánea y aliviar rojeces." },
+      { id: 90, name: "Aspiradora de Ácaros Portátil Inalámbrica", category: "Hogar", media: "", desc: "Limpieza higiénica profunda para colchones, almohadas y muebles tapizados sin enredos de cables." },
+      { id: 91, name: "Cápsulas Aceite Semilla de Calabaza", category: "Salud", media: "", desc: "Suplemento natural prensado en frío reconocido por su aporte diario de ácidos grasos esenciales y bienestar." },
+      { id: 92, name: "Removedor Eléctrico de Callos Recargable", category: "Tecnología", media: "", desc: "Lima rotativa suave y segura que deja los pies lisos y cuidados en minutos desde la comodidad de tu hogar." },
+      { id: 93, name: "Exfoliante Orange Limpiador Facial Aclarador", category: "Belleza", media: "", desc: "Gel exfoliante suave con esencia cítrica que retira impurezas y células muertas dejando la piel radiante." },
+      { id: 94, name: "Tabla de Cortar de Titanio Inoxidable", category: "Cocina", media: "", desc: "Superficie higiénica, ultraduradera y fácil de lavar que no absorbe olores ni mancha tus alimentos." },
+      { id: 95, name: "Cápsulas de Extracto de Ajo Añejado Bienestar", category: "Salud", media: "", desc: "Prácticas cápsulas sin olor fuerte formuladas para acompañar la salud cardiovascular y defensas diarias." },
+      { id: 96, name: "Cortinas de Esferas de Luces Navideñas", category: "Navidad", media: "", desc: "Iluminación cálida y festiva con esferas decorativas lista para llenar ventanas, salas y balcones de magia." }
+    ];
+
+    /* =========================================================================
+       TEMAS PASTEL E ÍCONOS SVG MINIMALISTAS POR CATEGORÍA
+       ========================================================================= */
+    const CATEGORY_STYLES = {
+      "Todos":          { bg: "#FFF5BA", pillBg: "#FFF5BA", cardGrad: "from-[#DBFFD6]/60 to-[#FFF5BA]/60" },
+      "Belleza":        { bg: "#FFC9DE", pillBg: "#FBE4FF", cardGrad: "from-[#FFC9DE]/55 via-[#FBE4FF]/65 to-[#FFCBC1]/45" },
+      "Salud":          { bg: "#DBFFD6", pillBg: "#DBFFD6", cardGrad: "from-[#DBFFD6]/65 via-[#AFF8DB]/45 to-[#FFFFD1]/50" },
+      "Hogar":          { bg: "#FFF5BA", pillBg: "#FFF5BA", cardGrad: "from-[#FFF5BA]/65 via-[#FFFFD1]/70 to-[#DBFFD6]/45" },
+      "Tecnología":     { bg: "#C4FAF8", pillBg: "#C4FAF8", cardGrad: "from-[#C4FAF8]/65 via-[#ACE7FF]/50 to-[#DCD3FF]/45" },
+      "Ropa Deportiva": { bg: "#AFF8DB", pillBg: "#AFF8DB", cardGrad: "from-[#AFF8DB]/60 via-[#C4FAF8]/55 to-[#DBFFD6]/50" },
+      "Moda":           { bg: "#DCD3FF", pillBg: "#DCD3FF", cardGrad: "from-[#DCD3FF]/60 via-[#FBE4FF]/60 to-[#ACE7FF]/40" },
+      "Mascotas":       { bg: "#FFCBC1", pillBg: "#FFCBC1", cardGrad: "from-[#FFCBC1]/60 via-[#FFF5BA]/65 to-[#FFFFD1]/60" },
+      "Bienestar":      { bg: "#DBFFD6", pillBg: "#DBFFD6", cardGrad: "from-[#DBFFD6]/60 via-[#C4FAF8]/50 to-[#FBE4FF]/45" },
+      "Herramientas":   { bg: "#ACE7FF", pillBg: "#ACE7FF", cardGrad: "from-[#ACE7FF]/55 via-[#C4FAF8]/55 to-[#FFF5BA]/45" },
+      "Bisutería":      { bg: "#FBE4FF", pillBg: "#FBE4FF", cardGrad: "from-[#FBE4FF]/70 via-[#FFC9DE]/55 to-[#FFF5BA]/45" },
+      "Deportes":       { bg: "#AFF8DB", pillBg: "#AFF8DB", cardGrad: "from-[#AFF8DB]/65 via-[#DBFFD6]/60 to-[#FFF5BA]/50" },
+      "Vehículos":      { bg: "#C4FAF8", pillBg: "#C4FAF8", cardGrad: "from-[#C4FAF8]/65 via-[#ACE7FF]/55 to-[#DBFFD6]/45" },
+      "Bebé":           { bg: "#FFC9DE", pillBg: "#FFC9DE", cardGrad: "from-[#FFC9DE]/60 via-[#FFF5BA]/60 to-[#C4FAF8]/50" },
+      "Cocina":         { bg: "#FFFFD1", pillBg: "#FFFFD1", cardGrad: "from-[#FFFFD1]/80 via-[#FFCBC1]/45 to-[#FFF5BA]/60" },
+      "Juguetería":     { bg: "#FFCBC1", pillBg: "#FFCBC1", cardGrad: "from-[#FFCBC1]/60 via-[#DCD3FF]/50 to-[#FFF5BA]/60" },
+      "Navidad":        { bg: "#FFF5BA", pillBg: "#FFF5BA", cardGrad: "from-[#DBFFD6]/65 via-[#FFF5BA]/75 to-[#FFCBC1]/55" }
+    };
+
+    const CATEGORIES_ORDER = [
+      "Todos", "Belleza", "Salud", "Hogar", "Tecnología", "Ropa Deportiva",
+      "Moda", "Mascotas", "Bienestar", "Herramientas", "Bisutería",
+      "Deportes", "Vehículos", "Bebé", "Cocina", "Juguetería", "Navidad"
+    ];
+
+    function getCategorySVG(category) {
+      const icons = {
+        "Belleza": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z"></path><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"></path><path d="M5 16l.7 1.6L7.3 18.3l-1.6.7L5 20.6l-.7-1.6-1.6-.7 1.6-.7L5 16z"></path></svg>`,
+        "Salud": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.3l7.8-7.8 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path><path d="M12 9v5"></path><path d="M9.5 11.5h5"></path></svg>`,
+        "Hogar": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"></path><path d="M9 21v-6h6v6"></path></svg>`,
+        "Tecnología": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><rect x="9" y="9" width="6" height="6" rx="1"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path></svg>`,
+        "Ropa Deportiva": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4L9 3l3 2 3-2 2.5 1L21 8l-2.5 3-1.5-1V20H7V10l-1.5 1L3 8l3.5-4z"></path></svg>`,
+        "Moda": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>`,
+        "Mascotas": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="9" r="2"></circle><circle cx="17" cy="9" r="2"></circle><circle cx="10" cy="6" r="1.8"></circle><circle cx="14" cy="6" r="1.8"></circle><path d="M12 11c-3 0-5.5 2.5-5 5.3.3 1.7 2 2.7 3.7 2.2.8-.2 1.8-.2 2.6 0 1.7.5 3.4-.5 3.7-2.2.5-2.8-2-5.3-5-5.3z"></path></svg>`,
+        "Bienestar": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 3 8 7 12z"></path><path d="M12 6v10"></path><path d="M9 11l3-2 3 2"></path></svg>`,
+        "Herramientas": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.6-2.6 2.3-2.7z"></path></svg>`,
+        "Bisutería": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 21 2 9 6 3"></polygon><line x1="2" y1="9" x2="22" y2="9"></line><polyline points="12 21 8 9 12 3 16 9 12 21"></polyline></svg>`,
+        "Deportes": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`,
+        "Vehículos": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l2-5h10l2 5"></path><rect x="3" y="11" width="18" height="6" rx="2"></rect><circle cx="7.5" cy="17" r="2"></circle><circle cx="16.5" cy="17" r="2"></circle></svg>`,
+        "Bebé": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M9 14c.8 1.2 2 1.8 3 1.8s2.2-.6 3-1.8"></path><circle cx="9.5" cy="10.5" r="0.8" fill="currentColor"></circle><circle cx="14.5" cy="10.5" r="0.8" fill="currentColor"></circle></svg>`,
+        "Cocina": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-2z"></path><path d="M8 7V5M12 7V4M16 7V5"></path><path d="M2 11h20"></path></svg>`,
+        "Juguetería": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.4 21 12 17.6 5.6 21 7 14 2 9.3 9 8.5 12 2"></polygon></svg>`,
+        "Navidad": `<svg class="w-12 h-12 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 6 10 9 10 5 16 19 16 15 10 18 10 12 2"></polygon><line x1="12" y1="16" x2="12" y2="22"></line><line x1="9" y1="22" x2="15" y2="22"></line></svg>`
+      };
+      return icons[category] || icons["Hogar"];
+    }
+
+    /* =========================================================================
+       ESTADO DE LA INTERFAZ Y UTILIDADES DE WHATSAPP
+       ========================================================================= */
+    let activeCategory = "Todos";
+    let searchQuery = "";
+    let visibleCount = 12;
+    const PAGE_STEP = 12;
+    let consultList = []; // Arreglo de objetos { key, name, category }
+    let activeQuickViewItem = null;
+    let toastTimeout = null;
+
+    const isFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    function openWhatsApp(message) {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function isVideoPath(path) {
+      return /\.(mp4|webm|ogg)(\?.*)?$/i.test(path || "");
+    }
+
+    function showToast(text) {
+      const bar = document.getElementById("toastBar");
+      document.getElementById("toastMessage").textContent = text;
+      bar.classList.remove("opacity-0", "translate-y-6");
+      bar.classList.add("opacity-100", "translate-y-0");
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        bar.classList.add("opacity-0", "translate-y-6");
+        bar.classList.remove("opacity-100", "translate-y-0");
+      }, 2400);
+    }
+
+    /* =========================================================================
+       PERSISTENCIA DE LA LISTA DE CONSULTA (SIN PRECIOS)
+       ========================================================================= */
+    function loadConsultList() {
+      try {
+        const raw = localStorage.getItem("providence7_consult_list");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) consultList = parsed;
+        }
+      } catch (err) {
+        consultList = [];
+      }
+    }
+
+    function saveConsultList() {
+      try {
+        localStorage.setItem("providence7_consult_list", JSON.stringify(consultList));
+      } catch (err) {
+        // Silencioso si el navegador bloquea storage local
+      }
+    }
+
+    function isInConsultList(key) {
+      return consultList.some((item) => String(item.key) === String(key));
+    }
+
+    function toggleConsultItem(itemObj) {
+      const idx = consultList.findIndex((i) => String(i.key) === String(itemObj.key));
+      if (idx > -1) {
+        consultList.splice(idx, 1);
+        showToast("Quitado de tu lista de consulta");
+      } else {
+        consultList.push({
+          key: String(itemObj.key),
+          name: itemObj.name,
+          category: itemObj.category
+        });
+        showToast("Sumado a tu lista de consulta");
+      }
+      saveConsultList();
+      renderConsultDrawer();
+      refreshConsultButtonStates();
+    }
+
+    function refreshConsultButtonStates() {
+      // Actualizar badge superior
+      const badge = document.getElementById("consultCountBadge");
+      badge.textContent = consultList.length;
+      badge.classList.add("scale-125");
+      setTimeout(() => badge.classList.remove("scale-125"), 220);
+
+      // Actualizar botones "+ Guardar" en tarjetas y destacados
+      document.querySelectorAll("[data-consult-key]").forEach((btn) => {
+        const key = btn.dataset.consultKey;
+        const saved = isInConsultList(key);
+        const label = btn.dataset.consultVariant === "featured"
+          ? (saved ? "En tu consulta" : "+ Sumar a mi consulta")
+          : (saved ? "Guardado" : "+ Guardar");
+
+        btn.textContent = label;
+        if (saved) {
+          btn.classList.remove("bg-[#FDFBF7]", "bg-pastel-butter/70", "text-brand-green");
+          btn.classList.add("bg-brand-amber", "text-brand-green", "border-brand-amber");
+        } else {
+          btn.classList.remove("bg-brand-amber", "border-brand-amber");
+          btn.classList.add("bg-[#FDFBF7]", "text-brand-green");
+        }
+      });
+
+      // Actualizar botón dentro del modal si está abierto
+      if (activeQuickViewItem) {
+        const qvBtn = document.getElementById("qvToggleConsultBtn");
+        const saved = isInConsultList(activeQuickViewItem.key);
+        qvBtn.textContent = saved ? "Quitar de mi consulta" : "+ Sumar a mi consulta";
+      }
+    }
+
+    /* =========================================================================
+       CARGA INTELIGENTE DE IMÁGENES Y VIDEOS LOCALES (CON RESPLADO PASTEL)
+       ========================================================================= */
+    function initOptionalBrandMedia() {
+      // Logo imagen opcional (./media/logo.jpeg)
+      if (BRAND_MEDIA.logoImage) {
+        const img = document.getElementById("customBrandLogoImg");
+        const svgWrap = document.getElementById("svgBrandLogoWrap");
+        img.onload = () => {
+          img.classList.remove("hidden");
+          svgWrap.classList.add("hidden");
+        };
+        img.onerror = () => {
+          img.classList.add("hidden");
+          svgWrap.classList.remove("hidden");
+        };
+        img.src = BRAND_MEDIA.logoImage;
+      }
+
+      // Logo GIF opcional en el Hero (./media/logo.gif)
+      if (BRAND_MEDIA.logoGif) {
+        const gif = document.getElementById("customHeroGifImg");
+        const fallback = document.getElementById("heroSvgVisualFallback");
+        gif.onload = () => {
+          gif.classList.remove("hidden");
+          fallback.classList.add("hidden");
+        };
+        gif.onerror = () => {
+          gif.classList.add("hidden");
+          fallback.classList.remove("hidden");
+        };
+        gif.src = BRAND_MEDIA.logoGif;
+      }
+
+      // Banner FLAASH opcional (./media/flaash.jpg)
+      if (BRAND_MEDIA.flaashBanner) {
+        const flaashImg = document.getElementById("flaashBannerImg");
+        const flaashSvg = document.getElementById("flaashSvgFallback");
+        flaashImg.onload = () => {
+          flaashImg.classList.remove("hidden");
+          flaashSvg.classList.add("hidden");
+        };
+        flaashImg.onerror = () => {
+          flaashImg.classList.add("hidden");
+          flaashSvg.classList.remove("hidden");
+        };
+        flaashImg.src = BRAND_MEDIA.flaashBanner;
+      }
+    }
+
+    function mountPromoVideo(containerId, videoSrc, title, subtitle) {
+      const box = document.getElementById(containerId);
+      if (!box) return;
+
+      box.innerHTML = `
+        <video
+          class="hidden w-full h-full object-cover"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+        <div class="video-poster-overlay absolute inset-0 flex flex-col items-center justify-center p-5 text-center transition-opacity duration-300">
+          <button
+            type="button"
+            class="play-trigger w-14 h-14 rounded-full bg-brand-green text-brand-amber shadow-lift flex items-center justify-center mb-3 hover:scale-105 transition-transform cursor-pointer"
+            aria-label="Reproducir ${title}"
+          >
+            <svg class="w-6 h-6 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </button>
+          <p class="font-display font-bold text-sm text-brand-green">${title}</p>
+          <p class="video-status-note text-xs text-[#4C6A5F] mt-1">${subtitle}</p>
+        </div>
+      `;
+
+      const videoEl = box.querySelector("video");
+      const overlay = box.querySelector(".video-poster-overlay");
+      const playBtn = box.querySelector(".play-trigger");
+      const statusNote = box.querySelector(".video-status-note");
+
+      let videoAvailable = false;
+
+      if (videoSrc) {
+        videoEl.addEventListener("loadedmetadata", () => {
+          videoAvailable = true;
+          videoEl.classList.remove("hidden");
+          overlay.classList.add("bg-[#FDFBF7]/55", "backdrop-blur-[2px]");
+        });
+
+        videoEl.addEventListener("error", () => {
+          videoAvailable = false;
+          videoEl.classList.add("hidden");
+        });
+
+        videoEl.src = videoSrc;
+      }
+
+      playBtn.addEventListener("click", () => {
+        if (videoAvailable) {
+          overlay.classList.add("opacity-0", "pointer-events-none");
+          videoEl.play().catch(() => {});
+        } else {
+          statusNote.textContent = "Video listo para pedir directo en nuestro WhatsApp";
+          openWhatsApp(`Hola PROVIDENCE 7, me gustaría ver el video "${title}" y conocer las ofertas especiales.`);
+        }
+      });
+    }
+
+    function createAdaptiveMediaHTML(mediaPath, category, title, pastelGrad) {
+      const style = CATEGORY_STYLES[category] || CATEGORY_STYLES["Hogar"];
+      const grad = pastelGrad || style.cardGrad;
+
+      const fallbackBlock = `
+        <div class="media-fallback w-full h-full flex flex-col items-center justify-center p-5 bg-gradient-to-br ${grad}">
+          <div class="w-20 h-20 rounded-3xl bg-white/85 backdrop-blur-sm border border-white shadow-sm flex items-center justify-center mb-2">
+            ${getCategorySVG(category)}
+          </div>
+          <span class="text-[11px] font-bold tracking-wider uppercase text-brand-green/70">${category}</span>
+        </div>
+      `;
+
+      if (!mediaPath || mediaPath.trim() === "") {
+        return fallbackBlock;
+      }
+
+      if (isVideoPath(mediaPath)) {
+        return `
+          <div class="relative w-full h-full">
+            ${fallbackBlock}
+            <video
+              src="${mediaPath}"
+              muted
+              loop
+              playsinline
+              autoplay
+              controls
+              class="hidden absolute inset-0 w-full h-full object-cover"
+              onloadeddata="this.classList.remove('hidden'); this.previousElementSibling.classList.add('hidden');"
+              onerror="this.remove();"
+            ></video>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="relative w-full h-full">
+          ${fallbackBlock}
+          <img
+            src="${mediaPath}"
+            alt="${title}"
+            loading="lazy"
+            class="hidden absolute inset-0 w-full h-full object-cover"
+            onload="this.classList.remove('hidden'); this.previousElementSibling.classList.add('hidden');"
+            onerror="this.remove();"
+          />
+        </div>
+      `;
+    }
+
+    /* =========================================================================
+       RENDERIZADO DE LOS 3 PRODUCTOS DESTACADOS
+       ========================================================================= */
+    function renderFeaturedProducts() {
+      const grid = document.getElementById("featuredProductsGrid");
+      grid.innerHTML = PRODUCTOS_DESTACADOS.map((prod) => {
+        const saved = isInConsultList(prod.id);
+        return `
+          <article class="tilt-surface bg-white rounded-[1.8rem] border border-brand-border shadow-soft overflow-hidden flex flex-col reveal-up is-visible">
+            <div class="relative aspect-[4/3] overflow-hidden cursor-pointer" data-qv-featured="${prod.id}">
+              ${createAdaptiveMediaHTML(prod.media, prod.category, prod.name, prod.pastelBg)}
+              <span class="absolute top-3.5 left-3.5 px-3 py-1.5 rounded-full bg-brand-amber text-brand-green text-[11px] font-extrabold shadow-sm">
+                ${prod.badge}
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between gap-4">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider text-brand-green/70">${prod.category}</span>
+                  <span class="px-2.5 py-0.5 rounded-full bg-pastel-mint text-brand-green text-[11px] font-bold">Pago en casa</span>
+                </div>
+                <h3 class="font-display font-extrabold text-xl text-brand-green leading-snug mb-2 cursor-pointer hover:text-brand-greenHover" data-qv-featured="${prod.id}">
+                  ${prod.name}
+                </h3>
+                <p class="text-sm text-[#4F6B61] leading-relaxed mb-3">${prod.desc}</p>
+                <p class="text-xs font-bold text-brand-green flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+                  Precio y oferta especial por WhatsApp
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 pt-2 border-t border-brand-border">
+                <button
+                  type="button"
+                  data-wa-product="${encodeURIComponent(prod.name)}"
+                  class="wa-product-btn w-full inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm shadow-sm transition-colors cursor-pointer"
+                >
+                  <svg class="w-4 h-4 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  <span>Preguntar oferta por WhatsApp</span>
+                </button>
+                <button
+                  type="button"
+                  data-consult-key="${prod.id}"
+                  data-consult-name="${encodeURIComponent(prod.name)}"
+                  data-consult-cat="${encodeURIComponent(prod.category)}"
+                  data-consult-variant="featured"
+                  class="consult-toggle-btn w-full px-4 py-2.5 rounded-2xl border border-brand-border font-bold text-xs transition-colors cursor-pointer ${saved ? 'bg-brand-amber text-brand-green border-brand-amber' : 'bg-[#FDFBF7] text-brand-green hover:bg-pastel-butter/70'}"
+                >
+                  ${saved ? 'En tu consulta' : '+ Sumar a mi consulta'}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      bindProductActionEvents(grid);
+      bindTiltCards(grid.querySelectorAll(".tilt-surface"));
+    }
+
+    /* =========================================================================
+       RENDERIZADO DE FILTROS Y CATÁLOGO DE 96 PRODUCTOS
+       ========================================================================= */
+    function renderCategoryPills() {
+      const bar = document.getElementById("categoryFilterBar");
+      bar.innerHTML = CATEGORIES_ORDER.map((cat) => {
+        const active = cat === activeCategory;
+        const style = CATEGORY_STYLES[cat] || CATEGORY_STYLES["Todos"];
+        const activeClasses = active
+          ? "bg-brand-green text-white border-brand-green shadow-sm"
+          : "text-brand-green border-brand-border hover:border-brand-green/40";
+        const inlineBg = active ? "" : `style="background-color: ${style.pillBg}88;"`;
+
+        return `
+          <button
+            type="button"
+            role="tab"
+            aria-selected="${active}"
+            data-cat-pill="${cat}"
+            ${inlineBg}
+            class="shrink-0 px-4 py-2.5 rounded-full border text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeClasses}"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join("");
+
+      bar.querySelectorAll("[data-cat-pill]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.dataset.catPill;
+          visibleCount = PAGE_STEP;
+          renderCategoryPills();
+          renderCatalog();
+        });
+      });
+    }
+
+    function getFilteredProducts() {
+      const q = searchQuery.trim().toLowerCase();
+      return CATALOGO_PRODUCTOS.filter((p) => {
+        const matchCat = activeCategory === "Todos" || p.category === activeCategory;
+        const matchQuery =
+          q === "" ||
+          p.name.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.desc.toLowerCase().includes(q);
+        return matchCat && matchQuery;
+      });
+    }
+
+    function renderCatalog() {
+      const filtered = getFilteredProducts();
+      const grid = document.getElementById("catalogGrid");
+      const emptyBox = document.getElementById("catalogEmptyState");
+      const countEl = document.getElementById("catalogResultCount");
+      const clearBtn = document.getElementById("clearFiltersBtn");
+      const paginationBar = document.getElementById("catalogPaginationBar");
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      const showAllBtn = document.getElementById("showAllBtn");
+
+      const hasFilter = activeCategory !== "Todos" || searchQuery.trim() !== "";
+      clearBtn.classList.toggle("hidden", !hasFilter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        emptyBox.classList.remove("hidden");
+        paginationBar.classList.add("hidden");
+        countEl.textContent = "0 productos encontrados";
+        return;
+      }
+
+      emptyBox.classList.add("hidden");
+      const slice = filtered.slice(0, visibleCount);
+      countEl.textContent = `Mostrando ${slice.length} de ${filtered.length} productos disponibles`;
+
+      grid.innerHTML = slice.map((prod) => {
+        const style = CATEGORY_STYLES[prod.category] || CATEGORY_STYLES["Hogar"];
+        const key = `cat-${prod.id}`;
+        const saved = isInConsultList(key);
+
+        return `
+          <article class="tilt-surface bg-white rounded-3xl border border-brand-border shadow-soft hover:shadow-lift overflow-hidden flex flex-col justify-between transition-all">
+            <div>
+              <div class="relative h-44 overflow-hidden cursor-pointer" data-qv-catalog="${prod.id}">
+                ${createAdaptiveMediaHTML(prod.media, prod.category, prod.name, style.cardGrad)}
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 text-brand-green text-[10px] font-bold shadow-sm border border-brand-border">
+                  Pago en casa
+                </span>
+              </div>
+
+              <div class="p-4 pb-3">
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold text-brand-green mb-2" style="background-color: ${style.pillBg};">
+                  ${prod.category}
+                </span>
+                <h3 class="font-display font-bold text-base text-brand-green leading-snug mb-1.5 cursor-pointer hover:text-brand-greenHover" data-qv-catalog="${prod.id}">
+                  ${prod.name}
+                </h3>
+                <p class="text-xs text-[#547066] leading-relaxed line-clamp-2 mb-3">
+                  ${prod.desc}
+                </p>
+                <p class="text-[11px] font-bold text-brand-green/85 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-amber shrink-0"></span>
+                  Precio y oferta especial por WhatsApp
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 pt-3 border-t border-brand-border flex items-center gap-2">
+              <button
+                type="button"
+                data-wa-product="${encodeURIComponent(prod.name)}"
+                class="wa-product-btn flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-brand-green hover:bg-brand-greenHover text-white font-bold text-xs transition-colors cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5 text-brand-amber shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>Consultar por WhatsApp</span>
+              </button>
+              <button
+                type="button"
+                data-consult-key="${key}"
+                data-consult-name="${encodeURIComponent(prod.name)}"
+                data-consult-cat="${encodeURIComponent(prod.category)}"
+                data-consult-variant="catalog"
+                class="consult-toggle-btn shrink-0 px-3 py-2.5 rounded-xl border border-brand-border font-bold text-xs transition-colors cursor-pointer ${saved ? 'bg-brand-amber text-brand-green border-brand-amber' : 'bg-[#FDFBF7] text-brand-green hover:bg-pastel-butter/80'}"
+              >
+                ${saved ? 'Guardado' : '+ Guardar'}
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      const remaining = filtered.length - slice.length;
+      if (remaining > 0) {
+        paginationBar.classList.remove("hidden");
+        loadMoreBtn.querySelector("span").textContent = `Mostrar más productos (${remaining} restantes)`;
+        showAllBtn.textContent = `Ver los ${filtered.length} resultados`;
+      } else {
+        paginationBar.classList.add("hidden");
+      }
+
+      bindProductActionEvents(grid);
+      bindTiltCards(grid.querySelectorAll(".tilt-surface"));
+    }
+
+    function bindProductActionEvents(container) {
+      container.querySelectorAll(".wa-product-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const name = decodeURIComponent(btn.dataset.waProduct);
+          openWhatsApp(`Hola PROVIDENCE 7, me interesa el producto "${name}". Quiero consultar su precio, oferta especial y coordinar el pago al llegar a mi casa.`);
+        });
+      });
+
+      container.querySelectorAll(".consult-toggle-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          toggleConsultItem({
+            key: btn.dataset.consultKey,
+            name: decodeURIComponent(btn.dataset.consultName),
+            category: decodeURIComponent(btn.dataset.consultCat)
+          });
+        });
+      });
+
+      container.querySelectorAll("[data-qv-catalog]").forEach((el) => {
+        el.addEventListener("click", () => {
+          const prod = CATALOGO_PRODUCTOS.find((p) => p.id === Number(el.dataset.qvCatalog));
+          if (prod) {
+            openQuickView({
+              key: `cat-${prod.id}`,
+              name: prod.name,
+              category: prod.category,
+              desc: prod.desc,
+              media: prod.media
+            });
+          }
+        });
+      });
+
+      container.querySelectorAll("[data-qv-featured]").forEach((el) => {
+        el.addEventListener("click", () => {
+          const prod = PRODUCTOS_DESTACADOS.find((p) => p.id === el.dataset.qvFeatured);
+          if (prod) {
+            openQuickView({
+              key: prod.id,
+              name: prod.name,
+              category: prod.category,
+              desc: prod.desc,
+              media: prod.media,
+              pastelBg: prod.pastelBg
+            });
+          }
+        });
+      });
+    }
+
+    /* =========================================================================
+       MODAL DE VISTA RÁPIDA
+       ========================================================================= */
+    function openQuickView(item) {
+      activeQuickViewItem = item;
+      const modal = document.getElementById("quickViewModal");
+      const style = CATEGORY_STYLES[item.category] || CATEGORY_STYLES["Hogar"];
+
+      const mediaSlot = document.getElementById("qvMediaSlot");
+      mediaSlot.innerHTML = createAdaptiveMediaHTML(item.media, item.category, item.name, item.pastelBg || style.cardGrad);
+
+      const catBadge = document.getElementById("qvCategoryBadge");
+      catBadge.textContent = item.category;
+      catBadge.style.backgroundColor = style.pillBg;
+
+      document.getElementById("qvTitle").textContent = item.name;
+      document.getElementById("qvDescription").textContent = item.desc;
+
+      const toggleBtn = document.getElementById("qvToggleConsultBtn");
+      toggleBtn.textContent = isInConsultList(item.key) ? "Quitar de mi consulta" : "+ Sumar a mi consulta";
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeQuickView() {
+      const modal = document.getElementById("quickViewModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      const video = modal.querySelector("video");
+      if (video) video.pause();
+      activeQuickViewItem = null;
+      document.body.style.overflow = "";
+    }
+
+    /* =========================================================================
+       DRAWER DE LISTA DE CONSULTA MÚLTIPLE
+       ========================================================================= */
+    function renderConsultDrawer() {
+      const listEl = document.getElementById("consultItemsList");
+      const emptyBox = document.getElementById("consultEmptyBox");
+      const extraFields = document.getElementById("consultExtraFields");
+      const footer = document.getElementById("consultDrawerFooter");
+      const sub = document.getElementById("consultDrawerSub");
+
+      document.getElementById("consultCountBadge").textContent = consultList.length;
+      sub.textContent = consultList.length === 1
+        ? "1 producto seleccionado"
+        : `${consultList.length} productos seleccionados`;
+
+      if (consultList.length === 0) {
+        listEl.innerHTML = "";
+        emptyBox.classList.remove("hidden");
+        extraFields.classList.add("hidden");
+        footer.classList.add("hidden");
+        return;
+      }
+
+      emptyBox.classList.add("hidden");
+      extraFields.classList.remove("hidden");
+      footer.classList.remove("hidden");
+
+      listEl.innerHTML = consultList.map((item) => {
+        const style = CATEGORY_STYLES[item.category] || CATEGORY_STYLES["Hogar"];
+        return `
+          <div class="p-3.5 rounded-2xl bg-white border border-brand-border flex items-center justify-between gap-3 shadow-xs">
+            <div class="min-w-0">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold text-brand-green mb-1" style="background-color: ${style.pillBg};">
+                ${item.category}
+              </span>
+              <p class="font-bold text-sm text-brand-green leading-snug truncate">${item.name}</p>
+            </div>
+            <button
+              type="button"
+              data-remove-consult="${item.key}"
+              aria-label="Quitar ${item.name}"
+              class="shrink-0 w-9 h-9 rounded-xl bg-[#FDFBF7] hover:bg-pastel-peach/60 text-[#667F75] hover:text-brand-green flex items-center justify-center cursor-pointer transition-colors"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        `;
+      }).join("");
+
+      listEl.querySelectorAll("[data-remove-consult]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetKey = btn.dataset.removeConsult;
+          consultList = consultList.filter((i) => String(i.key) !== String(targetKey));
+          saveConsultList();
+          renderConsultDrawer();
+          refreshConsultButtonStates();
+        });
+      });
+    }
+
+    function openConsultDrawer() {
+      document.getElementById("consultDrawerBackdrop").classList.remove("hidden");
+      document.getElementById("consultDrawer").classList.remove("translate-x-full");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeConsultDrawer() {
+      document.getElementById("consultDrawerBackdrop").classList.add("hidden");
+      document.getElementById("consultDrawer").classList.add("translate-x-full");
+      document.body.style.overflow = "";
+    }
+
+    /* =========================================================================
+       EFECTOS CINÉTICOS SUAVES: REVEAL SCROLL, TILT 3D Y MAGNETISMO
+       ========================================================================= */
+    function initScrollReveal() {
+      const nodes = document.querySelectorAll(".reveal-up");
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      nodes.forEach((el) => io.observe(el));
+    }
+
+    function bindTiltCards(nodes) {
+      if (!isFinePointer) return;
+      nodes.forEach((card) => {
+        if (card.dataset.tiltReady === "1") return;
+        card.dataset.tiltReady = "1";
+
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          card.style.setProperty("--mx", `${x}px`);
+          card.style.setProperty("--my", `${y}px`);
+          const rx = ((y - r.height / 2) / (r.height / 2)) * -2.6;
+          const ry = ((x - r.width / 2) / (r.width / 2)) * 2.6;
+          card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0px)";
+        });
+      });
+    }
+
+    function initMagneticElements() {
+      if (!isFinePointer) return;
+      document.querySelectorAll(".magnetic-el").forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+          const r = el.getBoundingClientRect();
+          const dx = (e.clientX - r.left - r.width / 2) * 0.2;
+          const dy = (e.clientY - r.top - r.height / 2) * 0.2;
+          el.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
+        });
+        el.addEventListener("mouseleave", () => {
+          el.style.transform = "translate3d(0, 0, 0)";
+        });
+      });
+    }
+
+    /* =========================================================================
+       INICIALIZACIÓN GENERAL
+       ========================================================================= */
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("footerYear").textContent = new Date().getFullYear();
+
+      loadConsultList();
+      initOptionalBrandMedia();
+
+      // Montar los 2 reproductores de video promocionales
+      mountPromoVideo(
+        "promoVideoBox1",
+        BRAND_MEDIA.video1,
+        "Ofertas Especiales de Temporada",
+        "Envíos rápidos con Transportadora FLAASH"
+      );
+      mountPromoVideo(
+        "promoVideoBox2",
+        BRAND_MEDIA.video2,
+        "Providence 7 · Los 7 Días",
+        "Lo mejor para tu hogar y familia"
+      );
+
+      renderFeaturedProducts();
+      renderCategoryPills();
+      renderCatalog();
+      renderConsultDrawer();
+
+      initScrollReveal();
+      bindTiltCards(document.querySelectorAll(".tilt-surface"));
+      initMagneticElements();
+
+      // Botones WhatsApp directos generales
+      document.getElementById("navWhatsappBtn").addEventListener("click", () => {
+        openWhatsApp("Hola PROVIDENCE 7, necesito atención personalizada para consultar precios y ofertas especiales.");
+      });
+      document.getElementById("mobileMenuWaBtn").addEventListener("click", () => {
+        openWhatsApp("Hola PROVIDENCE 7, necesito atención personalizada para consultar precios y ofertas especiales.");
+      });
+      document.getElementById("heroWhatsappBtn").addEventListener("click", () => {
+        openWhatsApp("Hola PROVIDENCE 7, quiero conocer las ofertas especiales de hoy y cómo funciona el pago al recibir en casa.");
+      });
+
+      document.querySelectorAll(".wa-direct-trigger").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          openWhatsApp(btn.dataset.waMessage || "Hola PROVIDENCE 7, quiero atención personalizada.");
+        });
+      });
+
+      // Menú móvil
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const mobilePanel = document.getElementById("mobileMenuPanel");
+      mobileBtn.addEventListener("click", () => {
+        const isOpen = !mobilePanel.classList.toggle("hidden");
+        mobileBtn.setAttribute("aria-expanded", String(isOpen));
+      });
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Buscador y paginación del catálogo
+      document.getElementById("catalogSearchInput").addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        visibleCount = PAGE_STEP;
+        renderCatalog();
+      });
+
+      const resetAllFilters = () => {
+        activeCategory = "Todos";
+        searchQuery = "";
+        visibleCount = PAGE_STEP;
+        document.getElementById("catalogSearchInput").value = "";
+        renderCategoryPills();
+        renderCatalog();
+      };
+      document.getElementById("clearFiltersBtn").addEventListener("click", resetAllFilters);
+      document.getElementById("emptyResetBtn").addEventListener("click", resetAllFilters);
+
+      document.getElementById("loadMoreBtn").addEventListener("click", () => {
+        visibleCount += PAGE_STEP;
+        renderCatalog();
+      });
+      document.getElementById("showAllBtn").addEventListener("click", () => {
+        visibleCount = CATALOGO_PRODUCTOS.length;
+        renderCatalog();
+      });
+
+      // Eventos del Modal de Vista Rápida
+      document.getElementById("qvCloseBtn").addEventListener("click", closeQuickView);
+      document.getElementById("quickViewModal").addEventListener("click", (e) => {
+        if (e.target.id === "quickViewModal") closeQuickView();
+      });
+      document.getElementById("qvWhatsappBtn").addEventListener("click", () => {
+        if (!activeQuickViewItem) return;
+        openWhatsApp(`Hola PROVIDENCE 7, me interesa el producto "${activeQuickViewItem.name}". Quiero consultar su precio, oferta especial y coordinar el pago al llegar a mi casa.`);
+      });
+      document.getElementById("qvToggleConsultBtn").addEventListener("click", () => {
+        if (!activeQuickViewItem) return;
+        toggleConsultItem(activeQuickViewItem);
+      });
+
+      // Eventos del Panel de Lista de Consulta
+      document.getElementById("openConsultListBtn").addEventListener("click", openConsultDrawer);
+      document.getElementById("closeConsultDrawerBtn").addEventListener("click", closeConsultDrawer);
+      document.getElementById("consultDrawerBackdrop").addEventListener("click", closeConsultDrawer);
+      document.getElementById("consultExploreBtn").addEventListener("click", () => {
+        closeConsultDrawer();
+        document.getElementById("catalogo").scrollIntoView({ behavior: "smooth" });
+      });
+
+      document.getElementById("clearConsultListBtn").addEventListener("click", () => {
+        consultList = [];
+        saveConsultList();
+        renderConsultDrawer();
+        refreshConsultButtonStates();
+        showToast("Lista de consulta vaciada");
+      });
+
+      document.getElementById("sendAllConsultWaBtn").addEventListener("click", () => {
+        if (consultList.length === 0) return;
+        const userName = document.getElementById("consultUserName").value.trim();
+        const userCity = document.getElementById("consultUserCity").value.trim();
+
+        const lines = [
+          "Hola PROVIDENCE 7, quiero consultar precio y ofertas especiales para los siguientes productos:",
+          ""
+        ];
+        consultList.forEach((item, index) => {
+          lines.push(`${index + 1}. ${item.name} (${item.category})`);
+        });
+        lines.push("");
+        if (userName) lines.push(`Nombre: ${userName}`);
+        if (userCity) lines.push(`Zona de entrega: ${userCity}`);
+        lines.push("Quedo atento(a) para coordinar el envío con Transportadora FLAASH y pago al recibir en casa.");
+
+        openWhatsApp(lines.join("\n"));
+      });
+
+      // Cerrar modales con tecla Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeQuickView();
+          closeConsultDrawer();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
